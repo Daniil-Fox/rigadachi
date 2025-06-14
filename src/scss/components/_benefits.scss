@@ -1,0 +1,92 @@
+.benefits {
+  padding: 120px 0 140px;
+  background: #242431;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  &__control {
+    .control__btn {
+      color: var(--color-beige2);
+    }
+  }
+
+  &__slider {
+    padding: 0
+      calc((100% - var(--container-width) + var(--container-offset)) / 2);
+  }
+  &__slider .swiper-slide {
+    width: auto;
+  }
+}
+
+.benefit {
+  width: 380px;
+  cursor: pointer;
+  &__img {
+    height: 400px;
+    margin-bottom: 16px;
+    background: #58586d;
+    position: relative;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    background: rgba(22, 15, 15, 0.4);
+    transform: scale(1.1);
+    filter: blur(15px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.35s ease-in;
+  }
+
+  &__desc {
+    position: absolute;
+    z-index: 5;
+    left: 24px;
+    right: 24px;
+    bottom: 25px;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  &__capture {
+    font-weight: 600;
+    transition: color 0.3s ease-in;
+  }
+
+  @include hover {
+    .benefit__capture {
+      color: var(--color-beige2);
+    }
+    .benefit__img::before {
+      opacity: 1;
+    }
+    .benefit__desc {
+      opacity: 1;
+    }
+  }
+}

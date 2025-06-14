@@ -1,0 +1,150 @@
+// ваш код
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  transition: background-color 0.3s ease-in;
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px 0 8px;
+    transition: padding 0.3s ease-in;
+    will-change: padding;
+    gap: 8%;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 200px;
+    height: 165px;
+    transform-origin: top;
+    transition: 0.3s ease-in;
+
+    svg {
+      width: 79px;
+      height: 100%;
+      fill: #fff;
+      transform-origin: top;
+      transition: 0.3s ease-in;
+
+      &:last-child {
+        position: absolute;
+        right: 0;
+        bottom: 28px;
+        width: 113px;
+        height: 43px;
+      }
+    }
+
+    @include hover {
+      svg {
+        fill: var(--color-green) !important;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__tel {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+    transition: color 0.3s ease-in;
+
+    @include hover {
+      color: var(--color-beige) !important;
+    }
+    &:focus {
+      outline: none;
+      color: var(--color-beige) !important;
+    }
+  }
+
+  &__btn {
+    padding: 12px 20px;
+    color: var(--color-beige);
+    background: rgba(0, 0, 0, 0.7);
+    background-color: #000;
+
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+    @include hover {
+      background-color: var(--color-beige2);
+      color: var(--color-white);
+    }
+    &:focus {
+      outline: none;
+      background-color: var(--color-beige2);
+      color: var(--color-white);
+    }
+    &:active {
+      color: rgba(#c08f4c, 0.6);
+    }
+  }
+}
+
+.header--fixed {
+  background-color: rgba(255, 255, 255, 0.85);
+
+  .nav__link,
+  .header__tel {
+    color: var(--text-dark);
+  }
+
+  .header__btn {
+    color: var(--text-dark);
+    background-color: var(--color-beige);
+
+    @include hover {
+      background-color: var(--text-dark);
+      color: var(--color-beige);
+    }
+    &:focus {
+      outline: none;
+      background-color: var(--text-dark);
+      color: var(--color-beige);
+    }
+    &:active {
+      color: rgba(#dbae71, 0.6);
+    }
+  }
+
+  .header__container {
+    padding: 8px 0 12px;
+  }
+
+  .header__logo {
+    top: 5px;
+    width: 106px;
+    height: 48px;
+  }
+
+  .header__logo svg {
+    fill: var(--text-darkgrey);
+  }
+
+  .header__logo svg:first-child {
+    width: 23px;
+    height: 48px;
+  }
+
+  .header__logo svg:last-child {
+    bottom: 10px;
+    width: 74px;
+    height: 29px;
+  }
+}

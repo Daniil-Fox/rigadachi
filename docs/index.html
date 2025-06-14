@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <!-- Inter -->
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Montserrat -->
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- MontserratAlternates -->
+  <link rel="preload" href="fonts/MontserratAlternates-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a href="./" class="header__logo">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+        <svg class="">
+          <use xlink:href="img/sprite.svg#logo_text"></use>
+        </svg>
+      </a>
+
+      <nav class="header__nav nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="#about" class="nav__link">О дачах</a>
+          </li>
+          <li class="nav__item">
+            <a href="#genplan" class="nav__link">Генплан</a>
+          </li>
+          <li class="nav__item">
+            <a href="#infra" class="nav__link">Инфраструктура</a>
+          </li>
+          <li class="nav__item">
+            <a href="#arch" class="nav__link">Архитектура</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__right">
+        <a href="tel:+74999999999" class="header__tel">+7 (499) 999-99-99</a>
+        <button class="btn btn-reset header__btn">Заказать звонок</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <main class="main">
+        <section class="hero">
+  <div class="hero__container container">
+    <h1 class="title1 title1--light hero__title">
+      Поселок у&nbsp;реки
+      <span>с уникальной атмосферой</span>
+    </h1>
+
+    <div class="hero__row">
+      <div class="hero__map hero-map">
+        <div class="hero-map__icon">
+          <img src="./img/svg/map-icon.svg" aria-hidden="true" alt="" />
+        </div>
+
+        <div class="hero-map__text">
+          <p class="title5 title5--light hero-map__top">1 час 10 минут</p>
+          <p class="capture1 capture1--light hero-map__bottom">
+            по Новорижскому шоссе или трассе М-11
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__buttons">
+        <a href="#genplan" class="btn-reset hero__btn hero__btn--green">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#map-btn"></use>
+          </svg>
+          Генплан<br />поселка
+        </a>
+        <a href="#" download class="btn-reset hero__btn hero__btn--black">
+          Скачать<br />
+          презентацию
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="about" id="about">
+  <div class="container">
+    <div class="about__container">
+      <div class="about__header heading-container">
+        <h2 class="title2 title2--grey about__title">О проекте</h2>
+        <div class="desc1 about__desc">
+          <p>
+            Современная дача&nbsp;&mdash; место, способствующее единению
+            с&nbsp;природой, интересному общению, отдыху от&nbsp;городской суеты
+            и&nbsp;созданию особого настроения.
+          </p>
+          <p>
+            Мы&nbsp;продаем уже третью очередь поселка с&nbsp;полностью
+            сформированной инфраструктурой.
+          </p>
+        </div>
+      </div>
+      <div class="about__grid">
+        <div class="about__img">
+          <picture>
+            <source srcset="./img/about/01.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/about/01.jpg"
+              class="image"
+              width="315"
+              height="240"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="about__img">
+          <picture>
+            <source srcset="./img/about/02.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/about/02.jpg"
+              class="image"
+              width="315"
+              height="240"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="about__img">
+          <picture>
+            <source srcset="./img/about/03.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/about/03.jpg"
+              class="image"
+              width="315"
+              height="240"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="about__img">
+          <picture>
+            <source srcset="./img/about/04.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/about/04.jpg"
+              class="image"
+              width="315"
+              height="240"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="about__img">
+          <picture>
+            <source srcset="./img/about/05.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/about/05.jpg"
+              class="image"
+              width="315"
+              height="240"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="genplan" id="genplan">
+  <div class="container">
+    <div class="heading-container genplan__header">
+      <h2 class="title2 title2--grey genplan__title">Генплан</h2>
+      <div class="genplan__benefits">
+        <div class="genplan__item gb">
+          <div class="gb__icon">
+            <img src="./img/genplan/01.svg" aria-hidden="true" alt="" />
+          </div>
+          <div class="gb__capture">Единая концепция</div>
+        </div>
+        <div class="genplan__item gb">
+          <div class="gb__icon">
+            <img src="./img/genplan/02.svg" aria-hidden="true" alt="" />
+          </div>
+          <div class="gb__capture">Развитая инфраструктура</div>
+        </div>
+        <div class="genplan__item gb">
+          <div class="gb__icon">
+            <img src="./img/genplan/03.svg" aria-hidden="true" alt="" />
+          </div>
+          <div class="gb__capture">Система безопасности</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="genplan__plan gplan">
+    <div class="gplan__img">
+      <picture>
+        <source srcset="./img/genplan.webp" type="image/webp" />
+        <img
+          loading="lazy"
+          src="./img/genplan.jpg"
+          class="image"
+          width="1440"
+          height="900"
+          alt="Фото генплана"
+        />
+      </picture>
+    </div>
+    <div class="genplan__info gplan-info">
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-playground"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Детская площадка</p>
+      </div>
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-trail"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Тропа здоровья</p>
+      </div>
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-beach"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Пляж</p>
+      </div>
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-sport"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Спорт. площадка</p>
+      </div>
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-alcove"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Гостевая беседка</p>
+      </div>
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-court"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Теннисный корт</p>
+      </div>
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-farm"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Ферма</p>
+      </div>
+      <div class="gplan-info__item">
+        <div class="gplan-info__icon">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#gplan-club"></use>
+          </svg>
+        </div>
+        <p class="gplan-info__capture">Клуб</p>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="infra" id="infra">
+  <div class="container">
+    <div class="infra__header">
+      <h2 class="title2 title2--grey infra__title">Инфраструктура</h2>
+
+      <div class="infra__control control">
+        <button class="btn-reset control__btn control__btn--prev infra-prev">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <button class="btn-reset control__btn control__btn--next infra-next">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="infra__slider swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="infra-item infra__item" tabindex="0">
+          <div class="infra-item__img">
+            <picture>
+              <source srcset="./img/infra/01.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/infra/01.jpg"
+                class="image"
+                width="340"
+                height="400"
+                alt="Фото Спортивной площадки"
+              />
+            </picture>
+          </div>
+          <div class="btn-reset infra-item__play">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#play"></use>
+            </svg>
+          </div>
+          <div class="infra-item__text">
+            <p class="desc1 desc1--light infra-item__capture">Спорт</p>
+            <p class="desc3 desc3--light infra-item__desc">
+              Теннисный корт, спортплощадка, тропа здоровья
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="infra-item infra__item" tabindex="0">
+          <div class="infra-item__img">
+            <picture>
+              <source srcset="./img/infra/02.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/infra/02.jpg"
+                class="image"
+                width="340"
+                height="400"
+                alt="Фото Дети"
+              />
+            </picture>
+          </div>
+          <div class="infra-item__text">
+            <p class="desc1 desc1--light infra-item__capture">Дети</p>
+            <p class="desc3 desc3--light infra-item__desc">
+              Игровые площадки, детский пляж, висячий парк, ферма
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="infra-item infra__item" tabindex="0">
+          <div class="infra-item__img">
+            <picture>
+              <source srcset="./img/infra/03.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/infra/03.jpg"
+                class="image"
+                width="340"
+                height="400"
+                alt="Фото Отдых и общение"
+              />
+            </picture>
+          </div>
+          <div class="infra-item__text">
+            <p class="desc1 desc1--light infra-item__capture">
+              Отдых и общение
+            </p>
+            <p class="desc3 desc3--light infra-item__desc">
+              Беседки, зоны барбекю, пляж, бильярдный клуб
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="infra-item infra__item" tabindex="0">
+          <div class="infra-item__img">
+            <picture>
+              <source srcset="./img/infra/04.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/infra/04.jpg"
+                class="image"
+                width="340"
+                height="400"
+                alt="Фото Питомцы"
+              />
+            </picture>
+          </div>
+          <div class="btn-reset infra-item__play">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#play"></use>
+            </svg>
+          </div>
+          <div class="infra-item__text">
+            <p class="desc1 desc1--light infra-item__capture">Питомцы</p>
+            <p class="desc3 desc3--light infra-item__desc">
+              2 фермы, собачья площадка
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="infra-item infra__item" tabindex="0">
+          <div class="infra-item__img">
+            <picture>
+              <source srcset="./img/infra/05.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/infra/05.jpg"
+                class="image"
+                width="340"
+                height="400"
+                alt="Фото Арт"
+              />
+            </picture>
+          </div>
+          <div class="infra-item__text">
+            <p class="desc1 desc1--light infra-item__capture">Арт</p>
+            <p class="desc3 desc3--light infra-item__desc">
+              Арт-пространства (скворечники, велик, библиотека и т.д.).
+              Арт-мероприятия (детские рисунки, покраска домиков)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="text">
+  <div class="container">
+    <div class="heading-container text__container">
+      <div class="text__left desc1">
+        <p>
+          Благодаря такому подходу создается абсолютно новая система ценностей,
+          так необходимая подавленному современной суетой Человеку.
+        </p>
+
+        <p>
+          Во&nbsp;взаимоотношениях с&nbsp;Природой, со&nbsp;своим собственным
+          Здоровьем, с&nbsp;близкими, с&nbsp;детьми,
+          да&nbsp;и&nbsp;в&nbsp;принципе со&nbsp;всем своим окружением
+          в&nbsp;самом широком смысле.
+        </p>
+      </div>
+
+      <div class="text__right desc1">
+        <p>
+          Можно без ложной скромности сказать, что здесь сформировано
+          эмоционально-положительное отношение к&nbsp;окружающему миру,
+          и&nbsp;умение видеть его красоту и неповторимость.
+          <b>
+            Что воистину является тем самым &laquo;Здесь и&nbsp;Сейчас&raquo;.
+          </b>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="realize">
+  <div class="container">
+    <div class="realize__container">
+      <div class="realize__content">
+        <div class="realize__left">
+          <p class="desc1 desc1--light realize__desc">
+            Если Вы осознали, что нуждаетесь в качественной живой среде, которая
+            эффектно контрастирует с городом – скачайте нашу презентацию
+          </p>
+        </div>
+        <a href="#" class="btn-reset icon-btn realize__btn">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#download"></use>
+          </svg>
+          <span>Скачать презентацию</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="history">
+  <div class="history__container">
+    <div class="history__header">
+      <h2 class="title2 title2--grey history__title">Наши истории</h2>
+
+      <div class="history__control control">
+        <button class="btn-reset control__btn control__btn--prev history-prev">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <button class="btn-reset control__btn control__btn--next history-next">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="history__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/01.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/01.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/02.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/02.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/03.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/03.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/04.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/04.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/05.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/05.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/06.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/06.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/07.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/07.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/08.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/08.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/10.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/10.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/11.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/11.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history-item history__item">
+            <div class="history-item__img">
+              <picture>
+                <source srcset="./img/history/12.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/history/12.jpg"
+                  class="image"
+                  width="204"
+                  height="360"
+                  alt="1"
+                />
+              </picture>
+            </div>
+            <p class="desc3 desc3--light history-item__capture">@имяавтора</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="arch" id="arch">
+  <div class="container">
+    <div class="heading-container arch__header">
+      <h2 class="title2 title2--grey arch__title">Архитектура</h2>
+
+      <div class="arch__control control">
+        <button class="btn-reset control__btn control__btn--prev arch-prev">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <button class="btn-reset control__btn control__btn--next arch-next">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="arch__slider swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="arch__item arch-item">
+          <div class="arch-item__img">
+            <picture>
+              <source srcset="./img/arch/01.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arch/01.jpg"
+                class="image"
+                width="380"
+                height="400"
+                alt="Фото проекта"
+              />
+            </picture>
+          </div>
+          <div class="arch-item__info">
+            <p class="desc2 arch-item__capture">Название проекта</p>
+
+            <div class="arch-item__row">
+              <div class="arch-item__square">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="12"
+                    height="12"
+                    rx="1"
+                    stroke="#C08F4C"
+                    stroke-width="2"
+                  />
+                  <circle cx="2" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="2" cy="14" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="14" r="2" fill="#C08F4C" />
+                </svg>
+                285 м²
+              </div>
+
+              <ul class="list-reset arch-item__list desc3 desc3--light">
+                <li>2 этажа</li>
+                <li>3 спальни</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="arch__item arch-item">
+          <div class="arch-item__img">
+            <picture>
+              <source srcset="./img/arch/02.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arch/01.jpg"
+                class="image"
+                width="380"
+                height="400"
+                alt="Фото проекта"
+              />
+            </picture>
+          </div>
+          <div class="arch-item__info">
+            <p class="desc2 arch-item__capture">Название проекта</p>
+
+            <div class="arch-item__row">
+              <div class="arch-item__square">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="12"
+                    height="12"
+                    rx="1"
+                    stroke="#C08F4C"
+                    stroke-width="2"
+                  />
+                  <circle cx="2" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="2" cy="14" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="14" r="2" fill="#C08F4C" />
+                </svg>
+                285 м²
+              </div>
+
+              <ul class="list-reset arch-item__list desc3 desc3--light">
+                <li>2 этажа</li>
+                <li>3 спальни</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="arch__item arch-item">
+          <div class="arch-item__img">
+            <picture>
+              <source srcset="./img/arch/03.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arch/01.jpg"
+                class="image"
+                width="380"
+                height="400"
+                alt="Фото проекта"
+              />
+            </picture>
+          </div>
+          <div class="arch-item__info">
+            <p class="desc2 arch-item__capture">Название проекта</p>
+
+            <div class="arch-item__row">
+              <div class="arch-item__square">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="12"
+                    height="12"
+                    rx="1"
+                    stroke="#C08F4C"
+                    stroke-width="2"
+                  />
+                  <circle cx="2" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="2" cy="14" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="14" r="2" fill="#C08F4C" />
+                </svg>
+                285 м²
+              </div>
+
+              <ul class="list-reset arch-item__list desc3 desc3--light">
+                <li>2 этажа</li>
+                <li>3 спальни</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="arch__item arch-item">
+          <div class="arch-item__img">
+            <picture>
+              <source srcset="./img/arch/04.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arch/01.jpg"
+                class="image"
+                width="380"
+                height="400"
+                alt="Фото проекта"
+              />
+            </picture>
+          </div>
+          <div class="arch-item__info">
+            <p class="desc2 arch-item__capture">Название проекта</p>
+
+            <div class="arch-item__row">
+              <div class="arch-item__square">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="12"
+                    height="12"
+                    rx="1"
+                    stroke="#C08F4C"
+                    stroke-width="2"
+                  />
+                  <circle cx="2" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="2" cy="14" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="14" r="2" fill="#C08F4C" />
+                </svg>
+                285 м²
+              </div>
+
+              <ul class="list-reset arch-item__list desc3 desc3--light">
+                <li>2 этажа</li>
+                <li>3 спальни</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="arch__item arch-item">
+          <div class="arch-item__img">
+            <picture>
+              <source srcset="./img/arch/05.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arch/01.jpg"
+                class="image"
+                width="380"
+                height="400"
+                alt="Фото проекта"
+              />
+            </picture>
+          </div>
+          <div class="arch-item__info">
+            <p class="desc2 arch-item__capture">Название проекта</p>
+
+            <div class="arch-item__row">
+              <div class="arch-item__square">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="12"
+                    height="12"
+                    rx="1"
+                    stroke="#C08F4C"
+                    stroke-width="2"
+                  />
+                  <circle cx="2" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="2" cy="14" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="14" r="2" fill="#C08F4C" />
+                </svg>
+                285 м²
+              </div>
+
+              <ul class="list-reset arch-item__list desc3 desc3--light">
+                <li>2 этажа</li>
+                <li>3 спальни</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="arch__item arch-item">
+          <div class="arch-item__img">
+            <picture>
+              <source srcset="./img/arch/06.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arch/01.jpg"
+                class="image"
+                width="380"
+                height="400"
+                alt="Фото проекта"
+              />
+            </picture>
+          </div>
+          <div class="arch-item__info">
+            <p class="desc2 arch-item__capture">Название проекта</p>
+
+            <div class="arch-item__row">
+              <div class="arch-item__square">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="12"
+                    height="12"
+                    rx="1"
+                    stroke="#C08F4C"
+                    stroke-width="2"
+                  />
+                  <circle cx="2" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="2" r="2" fill="#C08F4C" />
+                  <circle cx="2" cy="14" r="2" fill="#C08F4C" />
+                  <circle cx="14" cy="14" r="2" fill="#C08F4C" />
+                </svg>
+                285 м²
+              </div>
+
+              <ul class="list-reset arch-item__list desc3 desc3--light">
+                <li>2 этажа</li>
+                <li>3 спальни</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container heading-container">
+    <div class="arch__desc desc1">
+      <p>
+        Мы&nbsp;предлагаем широкий выбор проектов домов с&nbsp;современным
+        дизайном и планировками на&nbsp;ваш вкус.
+      </p>
+
+      <p>
+        При этом в&nbsp;третьей очереди действуют правила застройки,
+        определяющие единый архитектурный код. С&nbsp;их&nbsp;помощью
+        мы&nbsp;добиваемся создания гармоничной и&nbsp;комфортной среды.
+      </p>
+    </div>
+  </div>
+</section>
+
+        <section class="benefits" id="benefits">
+  <div class="container">
+    <div class="benefits__header container-heading">
+      <h2 class="title2 title2--light benefits__title">Преимущества</h2>
+
+      <div class="benefits__control control">
+        <button class="btn-reset control__btn control__btn--prev benefits-prev">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <button class="btn-reset control__btn control__btn--next benefits-next">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="benefits__slider swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="benefits__item benefit">
+          <div class="benefit__img">
+            <picture>
+              <source srcset="./img/benefits/01.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/benefits/01.jpg"
+                class="image"
+                width="300"
+                height="400"
+                alt="Фото преимуещства"
+              />
+            </picture>
+
+            <div class="benefit__desc desc3 desc3--light">
+              <p>
+                Дачные участки занимают менее половины территории поселка. А
+                большая его часть (более __ га) — лес, живописные холмы, лужайки
+                и фермы.
+              </p>
+              <p>
+                Вы и ваши дети получаете возможность отдыхать на природе не
+                покидая границ территории.
+              </p>
+            </div>
+          </div>
+
+          <p class="desc1 desc1--light benefit__capture">Территория</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="benefits__item benefit">
+          <div class="benefit__img">
+            <picture>
+              <source srcset="./img/benefits/02.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/benefits/02.jpg"
+                class="image"
+                width="300"
+                height="400"
+                alt="Фото преимуещства"
+              />
+            </picture>
+
+            <div class="benefit__desc desc3 desc3--light">
+              <p>
+                Протяженность берега реки Нудоль в границах поселка более 2 км.
+              </p>
+              <p>
+                Здесь можно купаться, загорать, ловить рыбу, кататься на лодке,
+                сидеть у костра или просто отдыхать в дали от городской суеты.
+              </p>
+            </div>
+          </div>
+
+          <p class="desc1 desc1--light benefit__capture">Река</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="benefits__item benefit">
+          <div class="benefit__img">
+            <picture>
+              <source srcset="./img/benefits/03.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/benefits/03.jpg"
+                class="image"
+                width="300"
+                height="400"
+                alt="Фото преимуещства"
+              />
+            </picture>
+
+            <div class="benefit__desc desc3 desc3--light">
+              <p>
+                Не любите футбол, теннис и велосипеды, но хотите гулять с
+                пользой для организма, выходите на тропу здоровья?
+              </p>
+              <p>
+                Почти 2 км для прогулки или бега по пересеченной местности.
+                Устали? Присядьте на лавочку и полюбуйтесь с высоты закатом и
+                долиной реки Нудоль.
+              </p>
+            </div>
+          </div>
+
+          <p class="desc1 desc1--light benefit__capture">Тропа здоровья</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="benefits__item benefit">
+          <div class="benefit__img">
+            <picture>
+              <source srcset="./img/benefits/04.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/benefits/04.jpg"
+                class="image"
+                width="300"
+                height="400"
+                alt="Фото преимуещства"
+              />
+            </picture>
+
+            <div class="benefit__desc desc3 desc3--light">
+              <p>
+                Большая часть поселка — ровная как ковер, но есть крутые склоны
+                и овраги. Дети любят играть в лесу на краю оврага, строят шалаши
+                и гнезда на деревьях.
+              </p>
+              <p>
+                А вы можете купить участок на склоне и построить дом с каскадом
+                террас и великолепным видом на долину.
+              </p>
+              <p>И мы с удовольствием поможем.</p>
+            </div>
+          </div>
+
+          <p class="desc1 desc1--light benefit__capture">Рельеф</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="benefits__item benefit">
+          <div class="benefit__img">
+            <picture>
+              <source srcset="./img/benefits/05.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/benefits/05.jpg"
+                class="image"
+                width="300"
+                height="400"
+                alt="Фото преимуещства"
+              />
+            </picture>
+
+            <div class="benefit__desc desc3 desc3--light">
+              <p>
+                Для вас — большое разнообразие готовых проектов и архитектурных
+                стилей на выбор, но в поселке действуют правила застройки.
+              </p>
+
+              <p>
+                Мы не строим высокие дома, не ставим глухие заборы, а ценим
+                дружественную архитектуру и открытую среду.
+              </p>
+            </div>
+          </div>
+
+          <p class="desc1 desc1--light benefit__capture">Архитектура</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="benefits__item benefit">
+          <div class="benefit__img">
+            <picture>
+              <source srcset="./img/benefits/06.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/benefits/06.jpg"
+                class="image"
+                width="300"
+                height="400"
+                alt="Фото преимуещства"
+              />
+            </picture>
+            <div class="benefit__desc desc3 desc3--light">
+              <p>
+                Единственное, чего нельзя купить за деньги (а уже включено в
+                стоимость участка) — дружелюбная атмосфера и хорошие соседи.
+              </p>
+              <p>
+                Вы можете оставить у дома велосипед или игрушки, не запирать
+                машину.
+              </p>
+              <p>
+                Ваши дети будут часами гулять вместе на природе, кормить коз на
+                ферме или строить шалаши, и, возможно, вернутся домой сытыми.
+                Ведь их кто-то уже покормил.
+              </p>
+            </div>
+          </div>
+
+          <p class="desc1 desc1--light benefit__capture">Атмосфера</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="cta">
+  <div class="container">
+    <div class="cta__container">
+      <div class="cta__content">
+        <h2 class="title3 title3--light cta__title">Получите консультацию</h2>
+        <p class="desc2 desc2--grey cta__subtitle">
+          и запишитесь на персональную экскурсию
+        </p>
+
+        <form action="#" class="form cta__form">
+          <label class="form__label">
+            <input
+              type="text"
+              placeholder="Имя"
+              name="Имя"
+              class="form__input input-name"
+            />
+          </label>
+          <label class="form__label">
+            <input
+              type="tel"
+              placeholder="Телефон"
+              name="Имя"
+              class="form__input input-tel"
+            />
+          </label>
+          <button class="btn-reset btn form__btn">Получить консультацию</button>
+          <label class="form__agree">
+            <input
+              type="checkbox"
+              name="Согласие с политикой"
+              class="visually-hidden"
+            />
+            <div class="form__check"></div>
+            <span>
+              Согласен на обработку
+              <a href="#" target="_blank">персональных данных</a>
+            </span>
+          </label>
+        </form>
+      </div>
+
+      <div class="cta__img">
+        <picture>
+          <source srcset="./img/benefits/01.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/benefits/01.jpg"
+            class="image"
+            width="610"
+            height="540"
+            alt="Фото здания"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="place">
+  <div class="container">
+    <div class="place__ container">
+      <h2 class="title2 title2--grey place__title">Расположение</h2>
+
+      <div class="place__wrapper">
+        <address class="place__content address">
+          <div class="address__tels">
+            <div class="address__row">
+              <a href="tel:+79166416368" class="link address__tel">
+                +7 (916) 641-63-68
+              </a>
+            </div>
+            <div class="address__row">
+              <a href="tel:+79166416368" class="link address__tel">
+                +7 (916) 641-63-68
+              </a>
+            </div>
+          </div>
+          <button class="btn btn-reset btn--green address__btn">
+            заказать звонок
+          </button>
+
+          <ul class="list-reset address__list">
+            <li class="address__item address-item">
+              <div class="address-item__icon">
+                <svg class="fill">
+                  <use xlink:href="img/sprite.svg#map-icon"></use>
+                </svg>
+              </div>
+              <div class="address-item__content">
+                <p class="address-item__capture desc2">
+                  Московская область, <br />дер. Кореньки
+                </p>
+              </div>
+            </li>
+            <li class="address__item address-item">
+              <div class="address-item__icon">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#map"></use>
+                </svg>
+              </div>
+              <div class="address-item__content">
+                <p class="address-item__capture desc2">Координаты поселка:</p>
+                <p class="address-item__capture desc2">56.365455, 37.068675</p>
+                <a href="#" class="address-item__link desc3"> На карте </a>
+              </div>
+            </li>
+            <li class="address__item address-item">
+              <div class="address-item__icon">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#email"></use>
+                </svg>
+              </div>
+              <div class="address-item__content">
+                <p class="address-item__capture desc2">
+                  <a href="mailto:info@rigadachi.com">info@rigadachi.com</a>
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="list-reset address__socials">
+            <li>
+              <a href="#">
+                <svg
+                  class="tg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="40" height="40" rx="20" />
+                  <path
+                    class="fill"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.95496 18.7976C14.658 16.3357 18.4547 14.6999 20.3611 13.9062C25.7872 11.6549 26.9278 11.2662 27.6611 11.25C27.824 11.25 28.1825 11.2824 28.4269 11.4768C28.6224 11.6387 28.6713 11.8493 28.7039 12.0112C28.7365 12.1732 28.7691 12.5133 28.7365 12.7725C28.4432 15.8498 27.1722 23.3165 26.5204 26.7501C26.2434 28.2078 25.7057 28.6937 25.1843 28.7423C24.0437 28.8395 23.1801 27.9973 22.0883 27.2846C20.3611 26.167 19.3997 25.4706 17.7214 24.3692C15.7824 23.1059 17.037 22.4094 18.1451 21.2757C18.4384 20.9841 23.4408 16.4491 23.5386 16.0442C23.5548 15.9956 23.5548 15.8012 23.4408 15.7041C23.3267 15.6069 23.1638 15.6393 23.0334 15.6717C22.8542 15.7041 20.1167 17.5181 14.7884 21.0975C14.0063 21.632 13.3056 21.8912 12.6701 21.875C11.9694 21.8588 10.6333 21.4862 9.62303 21.1623C8.40095 20.7736 7.42328 20.563 7.50475 19.8828C7.55363 19.5265 8.04247 19.1701 8.95496 18.7976Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  class="whatsapp"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M34.1721 5.81291C30.4119 2.06636 25.4113 0.00209427 20.0835 0C9.10589 0 0.171432 8.89108 0.167031 19.8197C0.165596 23.3131 1.08264 26.7231 2.82547 29.7288L0 40L10.558 37.2438C13.467 38.8229 16.7422 39.655 20.0755 39.6564H20.0837H20.0838C31.0603 39.6564 39.9955 30.7642 40 19.8355C40.002 14.5393 37.9324 9.55936 34.1721 5.81291Z"
+                  />
+                  <path
+                    class="fill"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M28.9853 23.8145C28.4932 23.5757 26.0739 22.4216 25.6228 22.2625C25.1717 22.1033 24.8438 22.0237 24.5157 22.5012C24.1877 22.9788 23.2446 24.0533 22.9576 24.3717C22.6706 24.69 22.3835 24.7299 21.8915 24.4911C21.3994 24.2524 19.8139 23.7486 17.9344 22.1233C16.4715 20.8585 15.484 19.2962 15.1969 18.8186C14.9099 18.341 15.1663 18.0829 15.4127 17.845C15.634 17.6314 15.9047 17.2879 16.1508 17.0093C16.3968 16.7307 16.4788 16.5317 16.6429 16.2134C16.8069 15.895 16.7249 15.6164 16.6018 15.3776C16.4788 15.1389 15.4948 12.7908 15.0847 11.8357C14.6853 10.9055 14.2796 11.0314 13.9775 11.0168C13.6908 11.0029 13.3625 11 13.0344 11C12.7064 11 12.1733 11.1194 11.7222 11.5969C11.2712 12.0745 10 13.2287 10 15.5766C10 17.9246 11.7633 20.193 12.0093 20.5114C12.2553 20.8299 15.4791 25.6483 20.4153 27.7146C21.5893 28.2061 22.506 28.4996 23.2205 28.7195C24.3994 29.0825 25.4721 29.0313 26.3199 28.9085C27.2653 28.7715 29.2313 27.7544 29.6414 26.6401C30.0513 25.5258 30.0513 24.5707 29.9284 24.3717C29.8054 24.1727 29.4773 24.0533 28.9853 23.8145Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  class="vk"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="40" height="40" rx="20" />
+                  <path
+                    class="fill"
+                    d="M17.9048 23.3357V13.75H21.5035V19.059C24.3825 18.705 26.2018 15.3722 26.7516 13.75H30.5003C30.0504 17.1418 27.0765 19.7472 25.552 20.5337C28.1011 21.3448 31.25 25.2528 31.25 27.4649H27.3514C25.9119 23.6896 22.853 22.5491 21.5035 22.4508V27.4649C13.0315 28.0547 8.53312 21.1236 8.75804 13.75H12.5067C12.7316 20.6812 16.3303 22.7458 17.9048 23.3357Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+
+        <div class="place__map">
+          <div class="place__info place-info">
+            <p class="place-info__capture capture1">
+              За 1 час 10 минут по Новорижскому шоссе или трассе М-11
+            </p>
+            <p class="desc2 place-info__subtitle">
+              вы приезжаете из шумного города к себе на дачу
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__left">
+        <div class="footer__row">
+          <small>© 2025. Все права защищены</small>
+        </div>
+
+        <div class="footer__row">
+          <a href="#" target="_blank">
+            Политика в отношении обработки персональных данных
+          </a>
+          <a href="#" target="_blank">Политика Cookies </a>
+        </div>
+      </div>
+      <div class="footer__right">
+        Разработано <a href="#" target="_blank">Телемарк</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

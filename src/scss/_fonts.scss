@@ -1,0 +1,22 @@
+// @include font-face("Muller", "MullerRegular", 400, normal);
+
+// Inter
+@include font-face("Inter", "Inter-Regular", 400, normal);
+@include font-face("Inter", "Inter-SemiBold", 600, normal);
+
+// Montserrat
+@include font-face("Montserrat", "Montserrat-Regular", 400, normal);
+@include font-face("Montserrat", "Montserrat-Medium", 500, normal);
+@include font-face("Montserrat", "Montserrat-SemiBold", 600, normal);
+@include font-face("Montserrat", "Montserrat-Bold", 700, normal);
+@include font-face("Montserrat", "Montserrat-ExtraBold", 800, normal);
+@include font-face("Montserrat", "Montserrat-Black", 900, normal);
+@include font-face("Montserrat", "Montserrat-SemiBoldItalic", 600, italic);
+
+// MontserratAlternates
+@include font-face(
+  "MontserratAlternates",
+  "MontserratAlternates-ExtraBold",
+  800,
+  normal
+);

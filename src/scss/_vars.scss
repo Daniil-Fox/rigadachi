@@ -1,0 +1,20 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Montserrat Alternates", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --content-width: 1320px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --color-beige: #dbae71;
+  --color-greendark: #2c4913;
+  --color-greenlight: #4da958;
+  --color-grey: #969696;
+  --color-white: #fff;
+  --color-beige2: #c08f4c;
+  --color-green: #2b8736;
+  --text-dark: #160f0f;
+  --text-darkgrey: #3b3b4c;
+  --text-white: #fff;
+  --text-grey: #6c6c7d;
+  --text-light-grey: #cacad4;
+}

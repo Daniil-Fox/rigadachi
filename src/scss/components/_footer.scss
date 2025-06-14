@@ -1,0 +1,32 @@
+.footer {
+  padding-bottom: 40px;
+  background-color: #f5f6f8;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1240px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: var(--text-darkgrey);
+  }
+
+  &__row {
+    display: flex;
+    gap: 20px 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  small,
+  a {
+    font-size: inherit;
+    color: inherit;
+  }
+}

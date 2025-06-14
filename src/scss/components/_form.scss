@@ -1,0 +1,106 @@
+.form {
+  &__label {
+    display: block;
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__input {
+    padding: 0 16px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(201, 220, 226, 0.08);
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+
+    color: var(--text-white);
+    transition: color 0.3s, background-color 0.3s;
+    &::placeholder {
+      color: #9292a8;
+    }
+    @include hover {
+      background-color: var(--color-white);
+      color: var(--text-dark);
+    }
+    &:focus {
+      color: var(--text-dark);
+      outline: none;
+      caret-color: var(--color-greenlight);
+      background-color: var(--color-white);
+    }
+  }
+
+  &__btn {
+    margin-bottom: 24px;
+    padding: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+  }
+  &__agree {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 154%;
+    color: var(--color-grey);
+    cursor: pointer;
+    a {
+      font-weight: 600;
+      color: var(--color-beige2);
+    }
+  }
+
+  &__agree input:checked ~ .form__check {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &__agree input:focus ~ .form__check {
+    border-color: var(--color-beige);
+    background-color: rgba(201, 220, 226, 0.2);
+  }
+  &__check {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border: 1px solid var(--color-beige2);
+    border-radius: 4px;
+    background: rgba(201, 220, 226, 0.08);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    transition: border-color 0.2s, background-color 0.2s;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-beige2);
+
+      background-image: url("./../img/svg/check.svg");
+      background-size: 70%;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.1s ease-in;
+    }
+  }
+}

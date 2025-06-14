@@ -1,0 +1,143 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 0;
+  margin-bottom: 120px;
+  min-height: 956px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(5, 6, 23, 0.5) 0%,
+      rgba(5, 6, 23, 0) 100%
+    ),
+    url("./../img/hero.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #060919;
+    opacity: 0.4;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 150%;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1160px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 386px;
+    gap: 10px;
+  }
+
+  &__btn {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    border-radius: 8px;
+    padding: 24px 39px;
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 145%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-beige);
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease-in;
+    svg {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      fill: none;
+      stroke: #bef6a9;
+      stroke-width: 2px;
+    }
+  }
+
+  &__btn--green::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(270deg, #82cc67 0%, #4da958 100%);
+  }
+
+  &__btn--green {
+    flex-grow: 1;
+    color: var(--color-white);
+    background-color: #3ca448;
+
+    @include hover {
+      background-color: transparent;
+    }
+    &:focus {
+      outline: none;
+      background-color: transparent;
+    }
+  }
+
+  &__btn--black {
+    background-color: rgba(0, 0, 0, 0.7);
+
+    @include hover {
+      color: var(--color-white);
+    }
+    &:focus {
+      outline: none;
+      color: var(--color-white);
+    }
+  }
+}
+
+.hero-map {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  &__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__top {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}

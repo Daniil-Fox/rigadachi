@@ -1,0 +1,40 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 10px 0 6px;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 2px;
+      opacity: 0;
+      width: 10%;
+      background-color: var(--color-beige2);
+      transition: width 0.3s ease-in, opacity 0.3s ease-in;
+    }
+
+    @include hover {
+      &:after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+}
