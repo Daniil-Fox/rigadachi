@@ -103,4 +103,27 @@
       transition: opacity 0.1s ease-in;
     }
   }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    & > *:not(:last-child),
+    & > * {
+      margin-bottom: 0;
+    }
+
+    .form__btn {
+      padding: 20px 10px;
+    }
+
+    .form__input {
+      height: 100%;
+    }
+  }
 }

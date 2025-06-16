@@ -1,0 +1,42 @@
+.modal-infra {
+  &__body {
+    max-width: 375px;
+    padding: 24px 0;
+    max-height: 620px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__slider {
+    padding: 0 20px;
+
+    .swiper-slide {
+      width: 335px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 8px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__capture {
+    margin: 0;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 169%;
+    color: var(--text-grey);
+  }
+}

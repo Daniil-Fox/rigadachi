@@ -20,7 +20,7 @@
   <div class="arch__slider swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="arch__item arch-item">
+        <div class="arch__item arch-item" data-modal-open="building1">
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/01.webp" type="image/webp" />
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item">
+        <div class="arch__item arch-item" data-modal-open="building1">
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/02.webp" type="image/webp" />
@@ -124,7 +124,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item">
+        <div class="arch__item arch-item" data-modal-open="building1">
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/03.webp" type="image/webp" />
@@ -176,7 +176,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item">
+        <div class="arch__item arch-item" data-modal-open="building1">
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/04.webp" type="image/webp" />
@@ -228,7 +228,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item">
+        <div class="arch__item arch-item" data-modal-open="building1">
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/05.webp" type="image/webp" />
@@ -280,7 +280,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item">
+        <div class="arch__item arch-item" data-modal-open="building1">
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/06.webp" type="image/webp" />
@@ -349,3 +349,327 @@
     </div>
   </div>
 </section>
+
+<div class="modal modal-build" id="building1">
+  <div class="modal-build__outer">
+    <button class="btn-reset modal__close modal-build__close" data-modal-close>
+      <svg class="">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <div class="modal__body modal-build__body">
+      <div class="modal-build__header">
+        <h4 class="title4 modal-build__title">Название проекта</h4>
+        <div class="modal-build__square">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="2"
+              y="2"
+              width="12"
+              height="12"
+              rx="1"
+              stroke="#C08F4C"
+              stroke-width="2"
+            />
+            <circle cx="2" cy="2" r="2" fill="#C08F4C" />
+            <circle cx="14" cy="2" r="2" fill="#C08F4C" />
+            <circle cx="2" cy="14" r="2" fill="#C08F4C" />
+            <circle cx="14" cy="14" r="2" fill="#C08F4C" />
+          </svg>
+          <span>285 м²</span>
+        </div>
+      </div>
+
+      <div class="modal-build__row">
+        <div class="modal-build__price title5 title5--grey">
+          от 11 950 000 ₽
+        </div>
+
+        <div class="modal-build__buttons">
+          <a href="#" class="btn btn-reset modal-build__btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 3C2 2.44772 2.44772 2 3 2H21C21.5523 2 22 2.44772 22 3V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V3ZM4 4V20H20V4H4Z"
+                fill="#6B3F3F"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.0014 7L13.0014 13.466L15.6812 11.2491L17 12.7548L12 17L7 12.7548L8.31884 11.2491L10.9986 13.466L10.9986 7H13.0014Z"
+                fill="#6B3F3F"
+              />
+            </svg>
+            Скачать информацию
+          </a>
+          <a href="#" class="btn btn--green btn-reset modal-build__btn">
+            Заказать звонок
+          </a>
+        </div>
+      </div>
+
+      <div class="modal-build__form mb-form">
+        <div class="mb-form__wrapper">
+          <div class="mb-form__header">
+            <p class="title5 title5--light mb-form__title">
+              Получите консультацию
+            </p>
+            <p class="desc2 mb-form__subtitle">
+              и запишитесь на персональную экскурсию
+            </p>
+            <form action="#" class="form mb-form__form">
+              <div class="form__row">
+                <label class="form__label">
+                  <input
+                    type="text"
+                    placeholder="Имя"
+                    name="Имя"
+                    class="form__input input-name"
+                  />
+                </label>
+                <label class="form__label">
+                  <input
+                    type="tel"
+                    placeholder="Телефон"
+                    name="Имя"
+                    class="form__input input-tel"
+                  />
+                </label>
+                <button class="btn-reset btn form__btn">Отправить</button>
+              </div>
+              <label class="form__agree">
+                <input
+                  type="checkbox"
+                  name="Согласие с политикой"
+                  class="visually-hidden"
+                  checked
+                />
+                <div class="form__check"></div>
+                <span>
+                  Согласен на обработку
+                  <a href="#" target="_blank">персональных данных</a>
+                </span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-build__list">
+        <ul class="list-reset">
+          <li>Количество спален: <span>4</span></li>
+          <li>Санузел: <span>2</span></li>
+          <li>Этаж: <span>1</span></li>
+          <li>Материал: <span>Кирпич</span></li>
+        </ul>
+        <ul class="list-reset">
+          <li>Общая площадь: <span>285 м²</span></li>
+          <li>Крыльцо: <span>3,45 м²</span></li>
+          <li>Терраса: <span>3,45 м²</span></li>
+          <li>Строительство: <span>6 месяцев</span></li>
+        </ul>
+      </div>
+
+      <div class="modal-build__block">
+        <p class="capture2 modal-build__capture">
+          Что входит в стомость домокомплекта:
+        </p>
+        <div class="modal-build__grid">
+          <ul class="list-reset modal-build__check">
+            <li class="desc3">Геология и привязка</li>
+            <li class="desc3">Стены из керамического блока</li>
+            <li class="desc3">Доставка и сборка домокомплекта</li>
+          </ul>
+          <ul class="list-reset modal-build__check">
+            <li class="desc3">Кровля — металлочерепица</li>
+            <li class="desc3">Фундамент железобетонная плита 250 мм</li>
+            <li class="desc3">Энергосберегающие окна</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-build__gallery">
+        <div class="modal-build__top">
+          <div class="modal-build__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./img/building.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/building.jpg"
+                    class="image"
+                    width="760"
+                    height="495"
+                    alt="Здание"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./img/building.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/building.jpg"
+                    class="image"
+                    width="760"
+                    height="495"
+                    alt="Здание"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./img/building.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/building.jpg"
+                    class="image"
+                    width="760"
+                    height="495"
+                    alt="Здание"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./img/building.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/building.jpg"
+                    class="image"
+                    width="760"
+                    height="495"
+                    alt="Здание"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./img/building.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/building.jpg"
+                    class="image"
+                    width="760"
+                    height="495"
+                    alt="Здание"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <button class="btn-reset stories__btn gallery-btn-prev">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <button class="btn-reset stories__btn gallery-btn-next">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-build__thumbs swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/building.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/building.jpg"
+                  class="image"
+                  width="150"
+                  height="84"
+                  alt="Здание"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/building.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/building.jpg"
+                  class="image"
+                  width="150"
+                  height="84"
+                  alt="Здание"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/building.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/building.jpg"
+                  class="image"
+                  width="150"
+                  height="84"
+                  alt="Здание"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/building.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/building.jpg"
+                  class="image"
+                  width="150"
+                  height="84"
+                  alt="Здание"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/building.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/building.jpg"
+                  class="image"
+                  width="150"
+                  height="84"
+                  alt="Здание"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-build__desc desc3">
+        <p>
+          Благодаря такому подходу создается абсолютно новая система ценностей,
+          так необходимая подавленному современной суетой Человеку.
+        </p>
+        <p>
+          Во взаимоотношениях с Природой, со своим собственным Здоровьем, с
+          близкими, с детьми, да и в принципе со всем своим окружением в самом
+          широком смысле.
+        </p>
+        <p>
+          Можно без ложной скромности сказать, что здесь сформировано
+          эмоционально-положительное отношение к окружающему миру, и умение
+          видеть его красоту и неповторимость.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
