@@ -1,14 +1,27 @@
 .infra {
   padding-top: 80px;
   margin-bottom: 64px;
+  @include big-tablet {
+    padding-top: 80px;
+    margin-bottom: 64px;
+  }
+  @include tablet {
+    padding-top: 40px;
+    margin-bottom: 48px;
+  }
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 40px;
+    padding-right: 40px;
     margin-bottom: 64px;
     margin-left: auto;
     max-width: 1200px;
+
+    @include big-tablet {
+      margin-bottom: 48px;
+      padding-right: 20px;
+    }
   }
 
   &__slider .swiper-slide {
@@ -16,7 +29,11 @@
   }
 
   &__slider {
-    padding: 0 calc((100% - var(--container-width)) / 2);
+    padding: 0 calc((100% - var(--container-width)) / 2 + 30px);
+
+    @media (max-width: 1400px) {
+      padding: 0 var(--container-offset);
+    }
   }
 }
 
@@ -25,6 +42,11 @@
   width: 340px;
   height: 400px;
   cursor: pointer;
+
+  @include big-tablet {
+    width: 300px;
+    height: 352px;
+  }
   &__img {
     position: relative;
     width: 100%;

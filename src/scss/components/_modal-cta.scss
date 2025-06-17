@@ -1,0 +1,25 @@
+.modal-cta {
+  &__body {
+    position: relative;
+    max-width: 375px;
+    padding: 113px 20px;
+    background-color: #242430;
+  }
+
+  &__close {
+    opacity: 0.8;
+    svg {
+      fill: var(--color-white);
+    }
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+    color: #82829e;
+  }
+}

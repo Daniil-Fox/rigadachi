@@ -16,6 +16,19 @@
     transition: padding 0.3s ease-in;
     will-change: padding;
     gap: 8%;
+
+    @include big-tablet {
+      gap: 4%;
+    }
+
+    @media (max-width: 1150px) {
+      gap: 80px;
+      padding-right: 20px;
+    }
+
+    @include mobile {
+      min-height: 60px;
+    }
   }
 
   &__logo {
@@ -27,20 +40,30 @@
     height: 165px;
     transform-origin: top;
     transition: 0.3s ease-in;
-
+    @include big-tablet {
+      width: 170px;
+      height: 140px;
+    }
     svg {
       width: 79px;
       height: 100%;
       fill: #fff;
       transform-origin: top;
       transition: 0.3s ease-in;
-
+      @include big-tablet {
+        width: 68px;
+      }
       &:last-child {
         position: absolute;
         right: 0;
         bottom: 28px;
         width: 113px;
         height: 43px;
+
+        @include big-tablet {
+          width: 95px;
+          height: 36px;
+        }
       }
     }
 
@@ -51,10 +74,30 @@
     }
   }
 
+  &__nav {
+    @media (max-width: 1150px) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    @media (max-width: 1150px) {
+      display: flex;
+    }
+  }
+
   &__right {
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @include big-tablet {
+      gap: 20px;
+    }
+    @include mobile {
+      display: none;
+    }
   }
 
   &__tel {
@@ -125,6 +168,10 @@
 
   .header__container {
     padding: 8px 0 12px;
+
+    @include mobile {
+      padding-right: 20px;
+    }
   }
 
   .header__logo {

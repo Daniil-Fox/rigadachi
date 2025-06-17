@@ -32,8 +32,66 @@
 
       <div class="header__right">
         <a href="tel:+74999999999" class="header__tel">+7 (499) 999-99-99</a>
-        <button class="btn btn-reset header__btn">Заказать звонок</button>
+        <button class="btn btn-reset header__btn" data-modal-open="modalCta">
+          Заказать звонок
+        </button>
       </div>
+      <button
+        class="btn-reset burger header__burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <div class="burger__overlay"></div>
+        <span class="burger__line"></span>
+      </button>
     </div>
   </div>
 </header>
+
+@include('./menu.html')
+
+<div class="modal modal-cta" id="modalCta">
+  <div class="modal-cta__body">
+    <button class="btn-reset modal__close modal-cta__close" data-modal-close>
+      <svg class="">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <p class="title5 title5--light modal-cta__title">Получите консультацию</p>
+    <p class="desc3 modal-cta__subtitle">
+      и запишитесь на персональную экскурсию
+    </p>
+    <form action="#" class="form modal-cta__form">
+      <label class="form__label">
+        <input
+          type="text"
+          placeholder="Имя"
+          name="Имя"
+          class="form__input input-name"
+        />
+      </label>
+      <label class="form__label">
+        <input
+          type="tel"
+          placeholder="Телефон"
+          name="Телефон"
+          class="form__input input-tel"
+        />
+      </label>
+      <button class="btn-reset btn form__btn">Получить консультацию</button>
+      <label class="form__agree">
+        <input
+          type="checkbox"
+          name="Согласие с политикой"
+          class="visually-hidden"
+        />
+        <div class="form__check"></div>
+        <span>
+          Согласен на обработку
+          <a href="#" target="_blank">персональных данных</a>
+        </span>
+      </label>
+    </form>
+  </div>
+</div>

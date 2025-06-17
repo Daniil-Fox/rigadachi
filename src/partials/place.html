@@ -1,25 +1,30 @@
 <section class="place">
   <div class="container">
-    <div class="place__ container">
+    <div class="place__container">
       <h2 class="title2 title2--grey place__title">Расположение</h2>
 
       <div class="place__wrapper">
         <address class="place__content address">
-          <div class="address__tels">
-            <div class="address__row">
-              <a href="tel:+79166416368" class="link address__tel">
-                +7 (916) 641-63-68
-              </a>
+          <div class="address__top">
+            <div class="address__tels">
+              <div class="address__row">
+                <a href="tel:+79166416368" class="link address__tel">
+                  +7 (916) 641-63-68
+                </a>
+              </div>
+              <div class="address__row">
+                <a href="tel:+79166416368" class="link address__tel">
+                  +7 (916) 641-63-68
+                </a>
+              </div>
             </div>
-            <div class="address__row">
-              <a href="tel:+79166416368" class="link address__tel">
-                +7 (916) 641-63-68
-              </a>
-            </div>
+            <button
+              class="btn btn-reset btn--green address__btn"
+              data-modal-open="modalCta"
+            >
+              заказать звонок
+            </button>
           </div>
-          <button class="btn btn-reset btn--green address__btn">
-            заказать звонок
-          </button>
 
           <ul class="list-reset address__list">
             <li class="address__item address-item">
@@ -135,6 +140,7 @@
               вы приезжаете из шумного города к себе на дачу
             </p>
           </div>
+          <div id="map"></div>
         </div>
       </div>
     </div>

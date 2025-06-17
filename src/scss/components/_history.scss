@@ -2,20 +2,52 @@
   padding-top: 80px;
   margin-bottom: 140px;
   padding-left: var(--container-offset);
+
+  @media (min-width: 1441px) {
+    margin-bottom: 160px;
+  }
+  @include big-tablet {
+    padding-top: 60px;
+    margin-bottom: 120px;
+  }
+  @include tablet {
+    padding-top: 80px;
+    margin-bottom: 80px;
+  }
+  @include small-tablet {
+    padding: 0 var(--container-offset);
+    padding-top: 80px;
+  }
   &__container {
     display: flex;
     gap: 60px;
     padding-left: calc((100% - var(--content-width)) / 2 + 80px);
+
+    @include small-tablet {
+      flex-direction: column;
+      padding: 0;
+      gap: 48px;
+    }
   }
   &__header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include small-tablet {
+      flex-direction: row;
+    }
   }
 
   &__slider {
     padding: 0 40px;
+
+    @include small-tablet {
+      padding: 0 var(--container-offset);
+      margin-left: calc(-1 * var(--container-offset));
+      margin-right: calc(-1 * var(--container-offset));
+    }
   }
 
   &__slider .swiper-slide {
@@ -24,11 +56,16 @@
 }
 
 .history-item {
-  height: 300px;
+  height: 360px;
   width: 204px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+
+  @include tablet {
+    width: 181px;
+    height: 320px;
+  }
   &::after {
     content: "";
     position: absolute;
