@@ -26,5 +26,8 @@
 
   &__btn--prev {
     transform: rotateY(180deg);
+    @include mobile {
+      display: none;
+    }
   }
 }

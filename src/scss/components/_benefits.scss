@@ -10,7 +10,9 @@
   @include tablet {
     padding: 60px 0 80px;
   }
-
+  @include mobile {
+    padding: 40px 0 50px;
+  }
   &__title {
     color: #82829e;
   }
@@ -23,6 +25,9 @@
 
     @include tablet {
       margin-bottom: 48px;
+    }
+    @include mobile {
+      margin-bottom: 24px;
     }
   }
 

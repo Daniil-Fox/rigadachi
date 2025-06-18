@@ -10,6 +10,9 @@
   @include tablet {
     margin-bottom: 60px;
   }
+  @include mobile {
+    margin-bottom: 0;
+  }
   &__container {
     display: flex;
     align-items: center;
@@ -19,6 +22,10 @@
     @media (max-width: 900px) {
       flex-direction: column;
       gap: 48px;
+    }
+    @include mobile {
+      align-items: stretch;
+      gap: 24px;
     }
   }
 
@@ -45,6 +52,12 @@
     }
     @media (max-width: 900px) {
       max-width: 100%;
+    }
+    @include mobile {
+      width: auto;
+      max-width: unset;
+      margin-left: calc(-1 * var(--container-offset));
+      margin-right: calc(-1 * var(--container-offset));
     }
   }
 

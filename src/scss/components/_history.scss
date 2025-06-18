@@ -18,6 +18,10 @@
     padding: 0 var(--container-offset);
     padding-top: 80px;
   }
+  @include mobile {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
   &__container {
     display: flex;
     gap: 60px;
@@ -28,6 +32,9 @@
       padding: 0;
       gap: 48px;
     }
+    @include mobile {
+      gap: 24px;
+    }
   }
   &__header {
     display: flex;
@@ -37,6 +44,7 @@
 
     @include small-tablet {
       flex-direction: row;
+      align-items: center;
     }
   }
 

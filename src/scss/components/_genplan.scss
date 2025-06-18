@@ -14,6 +14,10 @@
   @media (max-width: 990px) {
     margin-bottom: 120px;
   }
+  @include mobile {
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
   &__header {
     display: flex;
     align-items: center;
@@ -29,6 +33,9 @@
       align-items: stretch;
       margin-bottom: 24px;
     }
+    @include mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__benefits {
@@ -43,6 +50,11 @@
     @media (max-width: 990px) {
       justify-content: center;
     }
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -56,6 +68,9 @@
       @media (max-width: 990px) {
         inset: -24px -100px;
       }
+      @include mobile {
+        inset: -16px -30px;
+      }
     }
   }
 
@@ -66,6 +81,7 @@
     max-width: 1600px;
 
     img {
+      display: block;
       width: 100%;
       height: auto;
     }
@@ -88,6 +104,9 @@
       max-width: unset;
       bottom: -120px;
     }
+    @include mobile {
+      position: static;
+    }
   }
 }
 
@@ -101,7 +120,9 @@
     flex-shrink: 0;
     width: 48px;
     aspect-ratio: 1 / 1;
-
+    @include mobile {
+      width: 32px;
+    }
     img {
       display: block;
       width: 100%;
@@ -119,6 +140,10 @@
     color: var(--text-darkgrey);
     -webkit-line-clamp: 2;
     line-clamp: 2;
+
+    @include mobile {
+      max-width: 100%;
+    }
   }
 }
 
@@ -131,6 +156,11 @@
   gap: 4px 6px;
   @media (max-width: 990px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 15px 10px;
   }
   &__item {
     display: flex;

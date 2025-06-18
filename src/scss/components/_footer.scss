@@ -3,9 +3,6 @@
   background-color: #f5f6f8;
 
   &__container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     margin: 0 auto;
     max-width: 1240px;
     font-family: var(--font-family);
@@ -18,9 +15,30 @@
   &__row {
     display: flex;
     gap: 20px 40px;
+    flex-wrap: wrap;
 
     &:not(:last-child) {
       margin-bottom: 16px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+    @include mobile {
+      display: none;
+      margin-left: unset;
+    }
+
+    &--mob {
+      display: none;
+      @include mobile {
+        display: block;
+      }
     }
   }
 

@@ -18,7 +18,11 @@
     @include tablet {
       padding: 60px 40px;
     }
-
+    @include mobile {
+      padding: 24px 15px;
+      margin-left: calc(-1 * var(--container-offset));
+      margin-right: calc(-1 * var(--container-offset));
+    }
     &::after {
       content: "";
       position: absolute;
@@ -41,6 +45,15 @@
 
     svg {
       fill: var(--color-greenlight);
+    }
+
+    @include mobile {
+      max-width: 100%;
+      justify-content: center;
+
+      span {
+        max-width: 120px;
+      }
     }
   }
   &__content {

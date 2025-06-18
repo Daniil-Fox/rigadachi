@@ -462,6 +462,11 @@
     <div class="gplan__img">
       <picture>
         <source
+          srcset="./img/genplan576.webp"
+          type="image/webp"
+          media="(max-width: 576px)"
+        />
+        <source
           srcset="./img/genplan768.webp"
           type="image/webp"
           media="(max-width: 990px)"
@@ -2513,20 +2518,21 @@
       <footer class="footer">
   <div class="container">
     <div class="footer__container">
-      <div class="footer__left">
-        <div class="footer__row">
-          <small>© 2025. Все права защищены</small>
-        </div>
-
-        <div class="footer__row">
-          <a href="#" target="_blank">
-            Политика в отношении обработки персональных данных
-          </a>
-          <a href="#" target="_blank">Политика Cookies </a>
+      <div class="footer__row">
+        <small>© 2025. Все права защищены</small>
+        <div class="footer__right">
+          Разработано <a href="#" target="_blank">Телемарк</a>
         </div>
       </div>
-      <div class="footer__right">
-        Разработано <a href="#" target="_blank">Телемарк</a>
+
+      <div class="footer__row">
+        <a href="#" target="_blank">
+          Политика в отношении обработки персональных данных
+        </a>
+        <a href="#" target="_blank">Политика Cookies </a>
+        <div class="footer__right footer__right--mob">
+          Разработано <a href="#" target="_blank">Телемарк</a>
+        </div>
       </div>
     </div>
   </div>

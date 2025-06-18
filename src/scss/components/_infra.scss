@@ -9,6 +9,9 @@
     padding-top: 40px;
     margin-bottom: 48px;
   }
+  @include mobile {
+    margin-bottom: 24px;
+  }
   &__header {
     display: flex;
     align-items: center;
@@ -21,6 +24,10 @@
     @include big-tablet {
       margin-bottom: 48px;
       padding-right: 20px;
+    }
+    @include mobile {
+      padding-right: 0;
+      margin-bottom: 24px;
     }
   }
 
@@ -46,6 +53,10 @@
   @include big-tablet {
     width: 300px;
     height: 352px;
+  }
+  @include mobile {
+    width: 240px;
+    height: 280px;
   }
   &__img {
     position: relative;
@@ -93,9 +104,17 @@
     left: 24px;
     right: 24px;
     bottom: 24px;
+    @include mobile {
+      left: 15px;
+      bottom: 15px;
+      right: 15px;
+    }
   }
   &__capture {
     font-weight: 700;
+    @include mobile {
+      font-size: 16px;
+    }
   }
   &__desc {
     transform: translateY(150px);
@@ -124,6 +143,12 @@
       fill: none;
       stroke: currentColor;
       stroke-width: 3px;
+    }
+
+    @include mobile {
+      width: 48px;
+      height: 48px;
+      padding: 12px;
     }
   }
 
