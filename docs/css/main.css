@@ -296,6 +296,14 @@ a {
   position: relative;
 }
 
+.marker {
+  width: 60px;
+  height: 60px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .title1 {
   margin: 0;
   font-weight: 900;
@@ -581,7 +589,7 @@ a {
   align-items: center;
   gap: 16px;
   padding: 25px 33px;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 8px;
   font-family: var(--font-family);
   font-weight: 800;
@@ -590,12 +598,86 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-white);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+.icon-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#82cc67), to(#4da958));
+  background: linear-gradient(270deg, #82cc67 0%, #4da958 100%);
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .icon-btn svg {
   width: 48px;
   height: 48px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+.icon-btn--download svg {
+  fill: #4da958;
+  -webkit-transition: fill 0.3s ease-in;
+  transition: fill 0.3s ease-in;
+}
+.icon-btn--download .arrow {
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .icon-btn--download:hover::after {
+    opacity: 1;
+  }
+  .icon-btn--download:hover svg {
+    fill: #bef6a9;
+  }
+  .icon-btn--download:hover svg .arrow {
+    fill: var(--color-white);
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+.icon-btn--download:focus {
+  outline: none;
+}
+.icon-btn--download:focus::after {
+  opacity: 1;
+}
+.icon-btn--download:focus svg {
+  fill: #bef6a9;
+}
+.icon-btn--download:focus svg .arrow {
+  fill: var(--color-white);
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px);
+}
+.icon-btn--download:active {
+  background-color: var(--color-greenlight);
+}
+.icon-btn--download:active::after {
+  opacity: 0;
+}
+.icon-btn--download:active svg {
+  fill: #bef6a9;
+}
+.icon-btn--download:active svg .arrow {
+  fill: var(--color-white);
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .link {
@@ -1379,6 +1461,14 @@ a {
     -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
+}
+.about__img:focus {
+  outline: none;
+}
+.about__img:focus img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .about__img img {
   display: block;
@@ -2528,6 +2618,19 @@ a {
     transform: translateY(-12px);
   }
 }
+.arch-item:focus {
+  outline: none;
+}
+.arch-item:focus .arch-item__img img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.arch-item:focus .arch-item__info {
+  -webkit-transform: translateY(-12px);
+  -ms-transform: translateY(-12px);
+  transform: translateY(-12px);
+}
 
 .benefits {
   padding: 120px 0 140px;
@@ -2687,6 +2790,18 @@ a {
   .benefit:hover .benefit__desc {
     opacity: 1;
   }
+}
+.benefit:focus {
+  outline: none;
+}
+.benefit:focus .benefit__capture {
+  color: var(--color-beige2);
+}
+.benefit:focus .benefit__img::before {
+  opacity: 1;
+}
+.benefit:focus .benefit__desc {
+  opacity: 1;
 }
 
 .cta {

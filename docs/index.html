@@ -82,6 +82,8 @@
   />
   <link rel="stylesheet" href="css/vendor.css" />
   <link rel="stylesheet" href="css/main.css" />
+
+  <script src="https://api-maps.yandex.ru/v3/?apikey=8c9bb3f5-07ef-4aa2-8a70-b84bc9e8879b&lang=ru_RU"></script>
   <script defer src="jquery.min.js"></script>
   <script defer src="owl.carousel.min.js"></script>
   <script defer src="js/main.js"></script>
@@ -347,6 +349,7 @@
       <div class="about__grid">
         <div
           class="about__img"
+          tabindex="0"
           data-src="./img/about/01.webp"
           data-fancybox="gallery"
         >
@@ -364,6 +367,7 @@
         </div>
         <div
           class="about__img"
+          tabindex="0"
           data-src="./img/about/02.webp"
           data-fancybox="gallery"
         >
@@ -381,6 +385,7 @@
         </div>
         <div
           class="about__img"
+          tabindex="0"
           data-src="./img/about/03.webp"
           data-fancybox="gallery"
         >
@@ -398,6 +403,7 @@
         </div>
         <div
           class="about__img"
+          tabindex="0"
           data-src="./img/about/04.webp"
           data-fancybox="gallery"
         >
@@ -415,6 +421,7 @@
         </div>
         <div
           class="about__img"
+          tabindex="0"
           data-src="./img/about/05.webp"
           data-fancybox="gallery"
         >
@@ -1086,9 +1093,25 @@
             эффектно контрастирует с городом – скачайте нашу презентацию
           </p>
         </div>
-        <a href="#" class="btn-reset icon-btn realize__btn">
-          <svg class="">
-            <use xlink:href="img/sprite.svg#download"></use>
+        <a href="#" class="btn-reset icon-btn icon-btn--download realize__btn">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 6.5C4 5.67157 4.67157 5 5.5 5H41.5C42.3284 5 43 5.67157 43 6.5V42.5C43 43.3284 42.3284 44 41.5 44H5.5C4.67157 44 4 43.3284 4 42.5V6.5ZM7 8V41H40V8H7Z"
+            />
+            <path
+              class="arrow"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M25.0855 15L25.0855 28.4045L30.9118 23.3111L33 25.6951L23.5 34L14 25.6951L16.0882 23.3111L21.9145 28.4045L21.9145 15H25.0855Z"
+            />
           </svg>
           <span>Скачать презентацию</span>
         </a>
@@ -1443,7 +1466,11 @@
   <div class="arch__slider swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="arch__item arch-item" data-modal-open="building1">
+        <div
+          class="arch__item arch-item"
+          tabindex="0"
+          data-modal-open="building1"
+        >
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/01.webp" type="image/webp" />
@@ -1495,7 +1522,11 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item" data-modal-open="building1">
+        <div
+          class="arch__item arch-item"
+          tabindex="0"
+          data-modal-open="building1"
+        >
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/02.webp" type="image/webp" />
@@ -1547,7 +1578,11 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item" data-modal-open="building1">
+        <div
+          class="arch__item arch-item"
+          tabindex="0"
+          data-modal-open="building1"
+        >
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/03.webp" type="image/webp" />
@@ -1599,7 +1634,11 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item" data-modal-open="building1">
+        <div
+          class="arch__item arch-item"
+          tabindex="0"
+          data-modal-open="building1"
+        >
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/04.webp" type="image/webp" />
@@ -1651,7 +1690,11 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item" data-modal-open="building1">
+        <div
+          class="arch__item arch-item"
+          tabindex="0"
+          data-modal-open="building1"
+        >
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/05.webp" type="image/webp" />
@@ -1703,7 +1746,11 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="arch__item arch-item" data-modal-open="building1">
+        <div
+          class="arch__item arch-item"
+          tabindex="0"
+          data-modal-open="building1"
+        >
           <div class="arch-item__img">
             <picture>
               <source srcset="./img/arch/06.webp" type="image/webp" />
@@ -2127,7 +2174,7 @@
   <div class="benefits__slider swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="benefits__item benefit">
+        <div class="benefits__item benefit" tabindex="0">
           <div class="benefit__img">
             <picture>
               <source srcset="./img/benefits/01.webp" type="image/webp" />
@@ -2158,7 +2205,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="benefits__item benefit">
+        <div class="benefits__item benefit" tabindex="0">
           <div class="benefit__img">
             <picture>
               <source srcset="./img/benefits/02.webp" type="image/webp" />
@@ -2187,7 +2234,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="benefits__item benefit">
+        <div class="benefits__item benefit" tabindex="0">
           <div class="benefit__img">
             <picture>
               <source srcset="./img/benefits/03.webp" type="image/webp" />
@@ -2218,7 +2265,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="benefits__item benefit">
+        <div class="benefits__item benefit" tabindex="0">
           <div class="benefit__img">
             <picture>
               <source srcset="./img/benefits/04.webp" type="image/webp" />
@@ -2250,7 +2297,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="benefits__item benefit">
+        <div class="benefits__item benefit" tabindex="0">
           <div class="benefit__img">
             <picture>
               <source srcset="./img/benefits/05.webp" type="image/webp" />
@@ -2281,7 +2328,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="benefits__item benefit">
+        <div class="benefits__item benefit" tabindex="0">
           <div class="benefit__img">
             <picture>
               <source srcset="./img/benefits/06.webp" type="image/webp" />

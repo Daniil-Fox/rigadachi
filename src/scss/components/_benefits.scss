@@ -132,4 +132,17 @@
       opacity: 1;
     }
   }
+
+  &:focus {
+    outline: none;
+    .benefit__capture {
+      color: var(--color-beige2);
+    }
+    .benefit__img::before {
+      opacity: 1;
+    }
+    .benefit__desc {
+      opacity: 1;
+    }
+  }
 }

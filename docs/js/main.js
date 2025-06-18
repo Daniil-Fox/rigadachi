@@ -11308,21 +11308,26 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fancy_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/fancy.js */ "./src/js/components/fancy.js");
-/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header.js */ "./src/js/components/header.js");
-/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_infra_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/infra.js */ "./src/js/components/infra.js");
-/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
-/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
+/* harmony import */ var _components_map_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/map.js */ "./src/js/components/map.js");
+/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/header.js */ "./src/js/components/header.js");
+/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
+/* harmony import */ var _components_infra_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/infra.js */ "./src/js/components/infra.js");
+/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
+/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
+/* harmony import */ var _components_about_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/about.js */ "./src/js/components/about.js");
 
 
 
 
 
 
-(0,_components_header_js__WEBPACK_IMPORTED_MODULE_1__.initHeader)();
-(0,_components_slider_js__WEBPACK_IMPORTED_MODULE_2__.initAllSliders)();
-(0,_components_infra_js__WEBPACK_IMPORTED_MODULE_3__.initInfraCards)();
-(0,_components_modal_js__WEBPACK_IMPORTED_MODULE_4__.initModals)();
+
+
+(0,_components_header_js__WEBPACK_IMPORTED_MODULE_2__.initHeader)();
+(0,_components_slider_js__WEBPACK_IMPORTED_MODULE_3__.initAllSliders)();
+(0,_components_infra_js__WEBPACK_IMPORTED_MODULE_4__.initInfraCards)();
+(0,_components_modal_js__WEBPACK_IMPORTED_MODULE_5__.initModals)();
+(0,_components_about_js__WEBPACK_IMPORTED_MODULE_7__.initClickAbout)();
 
 /***/ }),
 
@@ -11342,6 +11347,31 @@ __webpack_require__.r(__webpack_exports__);
   htmlEl: document.documentElement,
   bodyEl: document.body
 });
+
+/***/ }),
+
+/***/ "./src/js/components/about.js":
+/*!************************************!*\
+  !*** ./src/js/components/about.js ***!
+  \************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initClickAbout: () => (/* binding */ initClickAbout)
+/* harmony export */ });
+function initClickAbout() {
+  const aboutItems = document.querySelectorAll(".about__img");
+  if (aboutItems.length > 0) {
+    aboutItems.forEach(item => {
+      item.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.code === "Enter") {
+          item.click();
+        }
+      });
+    });
+  }
+}
 
 /***/ }),
 
@@ -11416,6 +11446,48 @@ function initInfraCards() {
       });
     });
   }
+}
+
+/***/ }),
+
+/***/ "./src/js/components/map.js":
+/*!**********************************!*\
+  !*** ./src/js/components/map.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+initMap();
+async function initMap() {
+  await ymaps3.ready;
+  const {
+    YMap,
+    YMapDefaultSchemeLayer,
+    YMapDefaultFeaturesLayer,
+    YMapMarker
+  } = ymaps3;
+  const map = new YMap(document.getElementById("map"), {
+    location: {
+      center: [37.068675, 56.365455],
+      zoom: 10
+    }
+  });
+  map.addChild(new YMapDefaultSchemeLayer({}));
+  map.addChild(new YMapDefaultFeaturesLayer({}));
+  const markerContainerElement = document.createElement("div");
+  markerContainerElement.classList.add("marker-container");
+  const markerElement = document.createElement("div");
+  markerElement.classList.add("marker");
+  const markerImage = document.createElement("img");
+  markerImage.src = "./../img/svg/map-marker.svg";
+  markerImage.classList.add("image");
+  console.log(markerImage);
+  markerElement.appendChild(markerImage);
+  markerContainerElement.appendChild(markerElement);
+  const marker = new YMapMarker({
+    coordinates: [37.068675, 56.365455]
+  }, markerContainerElement);
+  map.addChild(marker);
 }
 
 /***/ }),

@@ -183,4 +183,13 @@
       transform: translateY(-12px);
     }
   }
+  &:focus {
+    outline: none;
+    .arch-item__img img {
+      transform: scale(1.05);
+    }
+    .arch-item__info {
+      transform: translateY(-12px);
+    }
+  }
 }
