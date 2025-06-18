@@ -113,3 +113,18 @@ a {
   height: 60px;
   transform: translateY(-50%);
 }
+.just-validate-error-field {
+  color: #df1b41 !important;
+
+  &::placeholder {
+    color: inherit !important;
+  }
+
+  & ~ .form__check {
+    border-color: #df1b41 !important;
+    background: rgba(223, 27, 65, 0.08);
+  }
+}
+.just-validate-error-label {
+  display: none;
+}

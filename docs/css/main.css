@@ -304,6 +304,33 @@ a {
   transform: translateY(-50%);
 }
 
+.just-validate-error-field {
+  color: #df1b41 !important;
+}
+.just-validate-error-field::-webkit-input-placeholder {
+  color: inherit !important;
+}
+.just-validate-error-field::-moz-placeholder {
+  color: inherit !important;
+}
+.just-validate-error-field:-ms-input-placeholder {
+  color: inherit !important;
+}
+.just-validate-error-field::-ms-input-placeholder {
+  color: inherit !important;
+}
+.just-validate-error-field::placeholder {
+  color: inherit !important;
+}
+.just-validate-error-field ~ .form__check {
+  border-color: #df1b41 !important;
+  background: rgba(223, 27, 65, 0.08);
+}
+
+.just-validate-error-label {
+  display: none;
+}
+
 .title1 {
   margin: 0;
   font-weight: 900;
