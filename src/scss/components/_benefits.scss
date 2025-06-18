@@ -1,18 +1,7 @@
 .benefits {
-  padding: 120px 0 140px;
+  padding: 40px 0 50px;
   background: #242431;
-  @media (min-width: 1441px) {
-    padding: 140px 0 160px;
-  }
-  @include big-tablet {
-    padding: 100px 0 120px;
-  }
-  @include tablet {
-    padding: 60px 0 80px;
-  }
-  @include mobile {
-    padding: 40px 0 50px;
-  }
+
   &__title {
     color: #82829e;
   }
@@ -21,14 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 64px;
-
-    @include tablet {
-      margin-bottom: 48px;
-    }
-    @include mobile {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
   }
 
   &__control {
@@ -38,11 +20,7 @@
   }
 
   &__slider {
-    padding: 0
-      calc((100% - var(--container-width) + var(--container-offset)) / 2);
-    @media (max-width: 1400px) {
-      padding: 0 var(--container-offset);
-    }
+    padding: 0 var(--container-offset);
   }
   &__slider .swiper-slide {
     width: auto;
@@ -50,28 +28,15 @@
 }
 
 .benefit {
-  width: 380px;
+  width: 240px;
   cursor: pointer;
 
-  @include big-tablet {
-    width: 300px;
-  }
-  @include small-tablet {
-    width: 240px;
-  }
   &__img {
-    height: 400px;
+    height: 253px;
     margin-bottom: 16px;
     background: #58586d;
     position: relative;
     overflow: hidden;
-
-    @include big-tablet {
-      height: 316px;
-    }
-    @include small-tablet {
-      height: 253px;
-    }
     img {
       display: block;
       width: 100%;
@@ -115,10 +80,7 @@
   &__capture {
     font-weight: 600;
     transition: color 0.3s ease-in;
-
-    @include big-tablet {
-      font-size: 16px;
-    }
+    font-size: 16px;
   }
 
   @include hover {
@@ -144,5 +106,59 @@
     .benefit__desc {
       opacity: 1;
     }
+  }
+}
+
+@media (min-width: 651px) {
+  .benefits {
+    padding: 60px 0 80px;
+    &__header {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .benefits {
+    &__header {
+      margin-bottom: 48px;
+    }
+    &__slider {
+      padding: 0 var(--container-offset);
+    }
+  }
+  .benefit {
+    width: 300px;
+    &__img {
+      height: 316px;
+    }
+    &__capture {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 1151px) {
+  .benefits {
+    padding: 100px 0 120px;
+  }
+  .benefit {
+    width: 380px;
+    &__img {
+      height: 400px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .benefits__slider {
+    padding: 0
+      calc((100% - var(--container-width) + var(--container-offset)) / 2);
+  }
+}
+
+@media (min-width: 1441px) {
+  .benefits {
+    padding: 140px 0 160px;
   }
 }

@@ -1,60 +1,25 @@
 .arch {
-  padding: 120px 0 140px;
+  padding: 40px 0 50px;
   background: #eef0f3;
-  @media (min-width: 1441px) {
-    padding: 140px 0 160px;
-  }
-  @include big-tablet {
-    padding: 100px 0 120px;
-  }
-  @include tablet {
-    padding: 60px 0 80px;
-  }
-  @include mobile {
-    padding: 40px 0 50px;
-  }
+
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 64px;
-
-    @include tablet {
-      margin-bottom: 48px;
-    }
-
-    @include mobile {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
   }
   &__slider {
-    margin-bottom: 64px;
-    padding: 0
-      calc((100% - var(--container-width) + var(--container-offset)) / 2);
-
-    @media (max-width: 1400px) {
-      padding: 0 var(--container-offset);
-    }
-    @include tablet {
-      margin-bottom: 48px;
-    }
-    @include mobile {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
+    padding: 0 var(--container-offset);
   }
   &__slider .swiper-slide {
     width: auto;
   }
-
   &__desc {
     p {
       margin: 0;
       &:not(:last-child) {
         margin-bottom: 1em;
-
-        @include tablet {
-          margin: 0;
-        }
       }
     }
   }
@@ -62,18 +27,9 @@
 
 .arch-item {
   position: relative;
-  width: 380px;
-  height: 400px;
+  width: 240px;
+  height: 253px;
   cursor: pointer;
-
-  @include big-tablet {
-    width: 300px;
-    height: 316px;
-  }
-  @include small-tablet {
-    width: 240px;
-    height: 253px;
-  }
   &::after {
     content: "";
     position: absolute;
@@ -95,7 +51,6 @@
     width: 100%;
     padding: 20px;
     padding-top: 80px;
-
     transition: transform 0.3s;
   }
   &__img {
@@ -103,7 +58,6 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-
     img {
       display: block;
       width: 100%;
@@ -111,70 +65,41 @@
       transition: transform 0.3s;
     }
   }
-
   &__capture {
     font-weight: 700;
     letter-spacing: 0.02em;
     color: var(--color-beige);
-    margin-bottom: 12px;
-
-    @include small-tablet {
-      margin-bottom: 6px;
-    }
+    margin-bottom: 6px;
   }
-
   &__row {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
     gap: 20px;
-
-    @include big-tablet {
-      gap: 12px;
-    }
-    @include small-tablet {
-      flex-direction: column;
-      align-items: stretch;
-    }
   }
-
   &__square {
     display: flex;
     align-items: center;
     gap: 6px;
-
     font-weight: 600;
     font-size: 24px;
     line-height: 100%;
     color: var(--color-white);
-
     svg {
       width: 24px;
       height: 24px;
     }
-
-    @include big-tablet {
-      font-size: 20px;
-    }
   }
-
   &__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
-
-    @include big-tablet {
-      gap: 12px;
-    }
   }
-
   &__list li {
-    @include big-tablet {
-      font-size: 13px;
-    }
+    font-size: 16px;
   }
-
   @include hover {
     .arch-item__img img {
       transform: scale(1.05);
@@ -201,30 +126,14 @@
   align-items: center;
   justify-content: flex-end;
   background-color: var(--color-greenlight);
-  padding: 60px 30px;
+  padding: 24px;
   &::after {
     display: none;
   }
-
-  @include big-tablet {
-    padding: 50px 24px;
-  }
-  @include small-tablet {
-    padding: 24px;
-  }
-
   .arch-item__icon {
-    width: 72px;
-    height: 72px;
+    width: 48px;
+    height: 48px;
     margin-bottom: 48px;
-
-    @include big-tablet {
-      margin-bottom: 24px;
-    }
-    @include small-tablet {
-      width: 48px;
-      height: 48px;
-    }
     svg {
       display: block;
       width: 100%;
@@ -232,21 +141,105 @@
       fill: #c0edb3;
     }
   }
-
   .arch-item__title {
     text-transform: uppercase;
     margin-bottom: 12px;
-    @include tablet {
-      font-size: 18px;
-    }
-
-    @include small-tablet {
-      font-size: 16px;
-    }
+    font-size: 16px;
   }
   .arch-item__under {
-    @include small-tablet {
+    font-size: 13px;
+  }
+}
+@media (min-width: 651px) {
+  .arch {
+    padding: 60px 0 80px;
+    &__slider {
+      margin-bottom: 48px;
+    }
+  }
+}
+@media (min-width: 769px) {
+  .arch {
+    &__header {
+      margin-bottom: 48px;
+    }
+
+    &__desc {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .arch-item {
+    width: 300px;
+    height: 316px;
+    &__capture {
+      margin-bottom: 12px;
+    }
+    &__row {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    &__square {
+      font-size: 20px;
+    }
+    &__list {
+      gap: 12px;
+    }
+    &__list li {
       font-size: 13px;
     }
+  }
+  .arch-item--noimage {
+    padding: 50px 24px;
+    .arch-item__icon {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 24px;
+    }
+    .arch-item__title {
+      font-size: 18px;
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .arch {
+    padding: 80px 0;
+  }
+}
+@media (min-width: 1151px) {
+  .arch {
+    padding: 100px 0 120px;
+
+    &__header {
+      margin-bottom: 64px;
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+  .arch {
+    padding: 120px 0 140px;
+  }
+  .arch-item {
+    width: 380px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .arch__slider {
+    padding: 0
+      calc((100% - var(--container-width) + var(--container-offset)) / 2);
+  }
+}
+
+@media (min-width: 1441px) {
+  .arch {
+    padding: 140px 0 160px;
   }
 }

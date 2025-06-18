@@ -1,4 +1,3 @@
-// ваш код
 .header {
   position: fixed;
   left: 0;
@@ -12,23 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 30px 0 8px;
+    min-height: 60px;
+    padding: 30px 20px 8px 0;
+    gap: 80px;
     transition: padding 0.3s ease-in;
     will-change: padding;
-    gap: 8%;
-
-    @include big-tablet {
-      gap: 4%;
-    }
-
-    @media (max-width: 1150px) {
-      gap: 80px;
-      padding-right: 20px;
-    }
-
-    @include mobile {
-      min-height: 60px;
-    }
   }
 
   &__logo {
@@ -36,34 +23,24 @@
     left: 0;
     top: 0;
     display: block;
-    width: 200px;
-    height: 165px;
+    width: 170px;
+    height: 140px;
     transform-origin: top;
     transition: 0.3s ease-in;
-    @include big-tablet {
-      width: 170px;
-      height: 140px;
-    }
+
     svg {
-      width: 79px;
+      width: 68px;
       height: 100%;
       fill: #fff;
       transform-origin: top;
       transition: 0.3s ease-in;
-      @include big-tablet {
-        width: 68px;
-      }
+
       &:last-child {
         position: absolute;
         right: 0;
         bottom: 28px;
-        width: 113px;
-        height: 43px;
-
-        @include big-tablet {
-          width: 95px;
-          height: 36px;
-        }
+        width: 95px;
+        height: 36px;
       }
     }
 
@@ -75,29 +52,15 @@
   }
 
   &__nav {
-    @media (max-width: 1150px) {
-      display: none;
-    }
+    display: none;
   }
 
   &__burger {
-    display: none;
-    @media (max-width: 1150px) {
-      display: flex;
-    }
+    display: flex;
   }
 
   &__right {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    @include big-tablet {
-      gap: 20px;
-    }
-    @include mobile {
-      display: none;
-    }
+    display: none;
   }
 
   &__tel {
@@ -122,7 +85,6 @@
     color: var(--color-beige);
     background: rgba(0, 0, 0, 0.7);
     background-color: #000;
-
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 
     @include hover {
@@ -136,6 +98,52 @@
     }
     &:active {
       color: rgba(#c08f4c, 0.6);
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  @media (min-width: 991px) {
+    &__container {
+      gap: 4%;
+    }
+  }
+
+  @media (min-width: 1151px) {
+    &__container {
+      justify-content: flex-end;
+      padding: 30px 0 8px;
+      gap: 8%;
+    }
+
+    &__logo {
+      width: 200px;
+      height: 165px;
+      svg {
+        width: 79px;
+        &:last-child {
+          width: 113px;
+          height: 43px;
+        }
+      }
+    }
+
+    &__nav {
+      display: block;
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__right {
+      gap: 30px;
     }
   }
 }
@@ -167,10 +175,11 @@
   }
 
   .header__container {
-    padding: 8px 0 12px;
+    padding: 8px 20px 12px 0;
 
-    @include mobile {
-      padding-right: 20px;
+    // --- Планшеты и больше ---
+    @media (min-width: 768px) {
+      padding: 8px 0 12px;
     }
   }
 
@@ -178,20 +187,20 @@
     top: 5px;
     width: 106px;
     height: 48px;
-  }
 
-  .header__logo svg {
-    fill: var(--text-darkgrey);
-  }
+    svg {
+      fill: var(--text-darkgrey);
 
-  .header__logo svg:first-child {
-    width: 23px;
-    height: 48px;
-  }
+      &:first-child {
+        width: 23px;
+        height: 48px;
+      }
 
-  .header__logo svg:last-child {
-    bottom: 10px;
-    width: 74px;
-    height: 29px;
+      &:last-child {
+        bottom: 10px;
+        width: 74px;
+        height: 29px;
+      }
+    }
   }
 }

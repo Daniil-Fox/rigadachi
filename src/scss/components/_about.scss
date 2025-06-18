@@ -1,38 +1,14 @@
 .about {
-  padding-top: 80px;
-  margin-bottom: 60px;
-  @media (min-width: 1441px) {
-    margin-bottom: 80px;
-  }
-  @include big-tablet {
-    padding-top: 50px;
-    margin-bottom: 50px;
-  }
-
-  @include tablet {
-    padding-top: 60px;
-    margin-bottom: 0;
-  }
-
-  @include mobile {
-    padding-top: 40px;
-  }
+  // --- Стили по умолчанию (Mobile < 650px) ---
+  padding-top: 40px;
+  margin-bottom: 0px;
 
   &__header {
-    margin-bottom: 64px;
-    @include tablet {
-      margin-bottom: 48px;
-    }
-    @include mobile {
-      margin-bottom: 32px;
-    }
+    margin-bottom: 32px;
   }
 
   &__title {
-    margin-bottom: 32px;
-    @include tablet {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
   }
 
   &__desc {
@@ -41,62 +17,110 @@
 
       &:not(:last-child) {
         margin-bottom: 1em;
-        @include small-tablet {
-          margin-bottom: 0;
-        }
       }
     }
   }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
-
-    @include mobile {
-      grid-template-columns: repeat(6, 1fr);
-    }
   }
 
   &__img {
     grid-column: 3 span;
     overflow: hidden;
-    height: 240px;
-    @include big-tablet {
-      height: 221px;
-    }
-    @include tablet {
-      height: 172px;
-    }
-    @include small-tablet {
-      height: 123px;
-    }
-    @include mobile {
-      height: 126px;
-    }
+    height: 126px;
+    position: relative;
+
     &:first-child {
       grid-column: 6 span;
       grid-row: 2 span;
-      height: auto;
+      height: 266px;
+      @media (min-width: 768px) {
+        height: 100%;
+      }
     }
 
-    @include hover {
-      img {
-        transform: scale(1.05);
-      }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s linear;
     }
+
+    &:hover img,
+    &:focus img {
+      transform: scale(1.05);
+    }
+
     &:focus {
       outline: none;
-      img {
-        transform: scale(1.05);
-      }
     }
   }
 
-  &__img img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s linear;
+  // --- Медиа-запрос для экранов > 650px ---
+  @media (min-width: 650px) {
+    // padding-top: 40px; // Это значение уже установлено по умолчанию, нет необходимости дублировать
+
+    &__desc {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__img {
+      height: 123px;
+    }
+  }
+
+  // --- Медиа-запрос для планшетов (Tablet) > 768px ---
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    margin-bottom: 0;
+
+    &__header {
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__img {
+      height: 172px;
+    }
+  }
+
+  // --- Медиа-запрос для десктопов (Desktop) > 1150px ---
+  @media (min-width: 1150px) {
+    padding-top: 50px;
+    margin-bottom: 50px;
+
+    &__img {
+      height: 221px;
+    }
+  }
+
+  // --- Медиа-запрос для больших десктопов (Large Desktop) > 1440px ---
+  @media (min-width: 1440px) {
+    margin-bottom: 80px;
+
+    &__header {
+      margin-bottom: 64px;
+    }
+
+    &__img {
+      height: 240px;
+    }
   }
 }

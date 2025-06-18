@@ -1,79 +1,39 @@
+// Стили по умолчанию (мобильные)
 .history {
-  padding-top: 80px;
-  margin-bottom: 140px;
+  padding-top: 50px;
+  margin-bottom: 50px;
   padding-left: var(--container-offset);
+  padding-right: var(--container-offset);
 
-  @media (min-width: 1441px) {
-    margin-bottom: 160px;
-  }
-  @include big-tablet {
-    padding-top: 60px;
-    margin-bottom: 120px;
-  }
-  @include tablet {
-    padding-top: 80px;
-    margin-bottom: 80px;
-  }
-  @include small-tablet {
-    padding: 0 var(--container-offset);
-    padding-top: 80px;
-  }
-  @include mobile {
-    padding-top: 50px;
-    margin-bottom: 50px;
-  }
   &__container {
     display: flex;
-    gap: 60px;
-    padding-left: calc((100% - var(--content-width)) / 2 + 80px);
-
-    @include small-tablet {
-      flex-direction: column;
-      padding: 0;
-      gap: 48px;
-    }
-    @include mobile {
-      gap: 24px;
-    }
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
   }
   &__header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-
-    @include small-tablet {
-      flex-direction: row;
-      align-items: center;
-    }
+    align-items: center;
+    gap: 20px;
   }
-
   &__slider {
-    padding: 0 40px;
-
-    @include small-tablet {
-      padding: 0 var(--container-offset);
-      margin-left: calc(-1 * var(--container-offset));
-      margin-right: calc(-1 * var(--container-offset));
-    }
+    padding: 0 var(--container-offset);
+    margin-left: calc(-1 * var(--container-offset));
+    margin-right: calc(-1 * var(--container-offset));
   }
-
   &__slider .swiper-slide {
     width: auto;
   }
 }
 
 .history-item {
-  height: 360px;
-  width: 204px;
+  height: 320px;
+  width: 181px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-
-  @include tablet {
-    width: 181px;
-    height: 320px;
-  }
   &::after {
     content: "";
     position: absolute;
@@ -116,7 +76,6 @@
     opacity: 0;
     transition: transform 0.3s ease-out, opacity 0.35s ease-in;
   }
-
   &__capture {
     position: absolute;
     left: 20px;
@@ -127,7 +86,6 @@
     opacity: 0;
     transition: opacity 0.3s ease-in;
   }
-
   @include hover {
     &::after {
       opacity: 1;
@@ -139,7 +97,6 @@
       opacity: 1;
     }
   }
-
   &:focus {
     outline: none;
     &::after {
@@ -151,5 +108,76 @@
     .history-item__img::before {
       opacity: 1;
     }
+  }
+}
+
+@media (min-width: 651px) {
+  .history {
+    padding-top: 80px;
+    &__container {
+      gap: 48px;
+    }
+  }
+}
+
+// min-width: 768px (tablet)
+@media (min-width: 769px) {
+  .history {
+    padding-top: 80px;
+    margin-bottom: 80px;
+    padding-right: 0;
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__container {
+      gap: 48px;
+      flex-direction: row;
+    }
+    &__slider {
+      padding: 0 40px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .history-item {
+    width: 181px;
+    height: 320px;
+  }
+}
+
+// min-width: 900px (контейнер)
+@media (min-width: 900px) {
+  .history {
+    &__container {
+      flex-direction: row;
+      gap: 60px;
+      padding-left: calc((100% - var(--content-width)) / 2 + 80px);
+    }
+  }
+}
+
+// min-width: 1150px (big-tablet)
+@media (min-width: 1150px) {
+  .history {
+    padding-top: 60px;
+    margin-bottom: 120px;
+  }
+  .history-item {
+    width: 204px;
+    height: 360px;
+  }
+}
+@media (min-width: 1281px) {
+  .history {
+    padding-top: 80px;
+    margin-bottom: 140px;
+  }
+}
+// min-width: 1441px (десктоп)
+@media (min-width: 1441px) {
+  .history {
+    margin-bottom: 160px;
   }
 }

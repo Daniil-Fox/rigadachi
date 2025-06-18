@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 80px 0;
-  margin-bottom: 40px;
-  min-height: 956px;
+  padding: 40px 0;
+  margin-bottom: 0;
+  min-height: 640px;
   background-image: linear-gradient(
       180deg,
       rgba(5, 6, 23, 0.5) 0%,
@@ -16,17 +16,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media (min-width: 1441px) {
-    margin-bottom: 60px;
-    background-image: linear-gradient(
-        180deg,
-        rgba(5, 6, 23, 0.5) 0%,
-        rgba(5, 6, 23, 0) 100%
-      ),
-      url("./../img/hero1920.webp");
-  }
-
-  @include big-tablet {
+  @media (min-width: 769px) {
+    padding: 80px 0;
     margin-bottom: 50px;
     min-height: 710px;
     background-image: linear-gradient(
@@ -37,13 +28,18 @@
       url("./../img/hero1280.webp");
   }
 
-  @include tablet {
-    margin-bottom: 0;
+  @media (min-width: 1281px) {
+    margin-bottom: 60px;
+    min-height: 800px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(5, 6, 23, 0.5) 0%,
+        rgba(5, 6, 23, 0) 100%
+      ),
+      url("./../img/hero1920.webp");
   }
-
-  @include small-tablet {
-    min-height: 640px;
-    padding: 40px 0;
+  @media (min-width: 1441px) {
+    min-height: 956px;
   }
 
   &::before {
@@ -60,14 +56,16 @@
     span {
       display: block;
       font-weight: 500;
-      font-size: 48px;
+      font-size: 20px;
       line-height: 150%;
       text-transform: lowercase;
-      @include tablet {
+
+      @media (min-width: 651px) {
         font-size: 32px;
       }
-      @include mobile {
-        font-size: 20px;
+
+      @media (min-width: 1151px) {
+        font-size: 48px;
       }
     }
   }
@@ -83,29 +81,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 32px;
+    flex-wrap: wrap;
 
-    @media (max-width: 850px) {
-      flex-wrap: wrap;
-      gap: 32px;
+    @media (min-width: 851px) {
+      gap: 40px;
+      flex-wrap: nowrap;
     }
   }
 
   &__buttons {
     display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     width: 100%;
     max-width: 386px;
     gap: 10px;
 
-    @media (max-width: 380px) {
-      flex-direction: column;
+    @media (min-width: 381px) {
+      flex-direction: row;
     }
   }
 
   &__btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     border-radius: 8px;
     padding: 24px 39px;
     font-weight: 800;
@@ -118,6 +119,7 @@
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease, color 0.3s ease-in;
+
     svg {
       flex-shrink: 0;
       width: 32px;
@@ -127,18 +129,10 @@
       stroke-width: 2px;
     }
 
-    @include mobile {
+    @media (min-width: 651px) {
       flex-grow: 1;
       justify-content: center;
     }
-  }
-
-  &__btn--green::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: linear-gradient(270deg, #82cc67 0%, #4da958 100%);
   }
 
   &__btn--green {
@@ -146,9 +140,18 @@
     color: var(--color-white);
     background-color: #3ca448;
 
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: linear-gradient(270deg, #82cc67 0%, #4da958 100%);
+    }
+
     @include hover {
       background-color: transparent;
     }
+
     &:focus {
       outline: none;
       background-color: transparent;
@@ -161,6 +164,7 @@
     @include hover {
       color: var(--color-white);
     }
+
     &:focus {
       outline: none;
       color: var(--color-white);
@@ -186,20 +190,22 @@
   }
 
   &__top {
+    font-size: 20px;
+
     &:not(:last-child) {
       margin-bottom: 4px;
     }
 
-    @include tablet {
+    @media (min-width: 651px) {
       font-size: 32px;
     }
-    @include mobile {
-      font-size: 20px;
-    }
   }
+
   &__bottom {
-    @include mobile {
-      font-size: 14px;
+    font-size: 14px;
+
+    @media (min-width: 651px) {
+      font-size: inherit;
     }
   }
 }

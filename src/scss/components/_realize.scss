@@ -1,28 +1,16 @@
+// Стили по умолчанию (мобильные)
 .realize {
-  margin-bottom: 60px;
-  @media (min-width: 1441px) {
-    margin-bottom: 80px;
-  }
-  @include tablet {
-    margin-bottom: 0;
-  }
+  margin-bottom: 0;
+
   &__container {
     background-image: url("./../img/realize.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-
-    padding: 60px 80px;
-
-    @include tablet {
-      padding: 60px 40px;
-    }
-    @include mobile {
-      padding: 24px 15px;
-      margin-left: calc(-1 * var(--container-offset));
-      margin-right: calc(-1 * var(--container-offset));
-    }
+    padding: 24px 15px;
+    margin-left: calc(-1 * var(--container-offset));
+    margin-right: calc(-1 * var(--container-offset));
     &::after {
       content: "";
       position: absolute;
@@ -39,36 +27,73 @@
     width: 100%;
   }
   &__btn {
-    max-width: 250px;
+    max-width: 100%;
     flex-shrink: 0;
     width: 100%;
-
     svg {
       fill: var(--color-greenlight);
     }
-
-    @include mobile {
-      max-width: 100%;
-      justify-content: center;
-
-      span {
-        max-width: 120px;
-      }
+    justify-content: center;
+    span {
+      max-width: 120px;
     }
   }
   &__content {
     position: relative;
     z-index: 4;
-
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+}
 
-    @media (max-width: 900px) {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 16px;
+// min-width: 768px (tablet)
+@media (min-width: 768px) {
+  .realize {
+    margin-bottom: 0px;
+    &__container {
+      padding: 60px 40px;
+      margin-left: 0;
+      margin-right: 0;
     }
+    &__btn {
+      max-width: 250px;
+      span {
+        max-width: unset;
+      }
+    }
+    &__content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+}
+
+// min-width: 900px (контент)
+@media (min-width: 900px) {
+  .realize {
+    &__content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+}
+@media (min-width: 1150px) {
+  .realize {
+    margin-bottom: 60px;
+    &__container {
+      padding: 60px 80px;
+    }
+  }
+}
+@media (min-width: 1441px) {
+  .realize {
+    margin-bottom: 80px;
   }
 }

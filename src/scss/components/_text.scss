@@ -1,63 +1,30 @@
+// Стили по умолчанию (мобильные)
 .text {
-  margin-bottom: 64px;
+  margin-bottom: 0;
 
-  @media (min-width: 1441px) {
-    margin-bottom: 84px;
-  }
-  @include big-tablet {
-    margin-bottom: 48px;
-  }
-  @include tablet {
-    margin-bottom: 60px;
-  }
-  @include mobile {
-    margin-bottom: 0;
-  }
   &__container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    gap: 40px;
-
-    @media (max-width: 900px) {
-      flex-direction: column;
-      gap: 48px;
-    }
-    @include mobile {
-      align-items: stretch;
-      gap: 24px;
-    }
+    gap: 24px;
+    flex-direction: column;
   }
 
   &__left {
-    max-width: 540px;
+    max-width: 100%;
     width: 100%;
-
-    @include big-tablet {
-      max-width: 444px;
-    }
-    @media (max-width: 900px) {
-      max-width: 100%;
-    }
   }
 
   &__right {
-    width: 100%;
-    max-width: 520px;
+    width: auto;
+    max-width: unset;
+    margin-left: calc(-1 * var(--container-offset));
+    margin-right: calc(-1 * var(--container-offset));
     padding: 32px 48px;
     background: #eef0f3;
     flex-shrink: 0;
     b {
       display: block;
-    }
-    @media (max-width: 900px) {
-      max-width: 100%;
-    }
-    @include mobile {
-      width: auto;
-      max-width: unset;
-      margin-left: calc(-1 * var(--container-offset));
-      margin-right: calc(-1 * var(--container-offset));
     }
   }
 
@@ -65,10 +32,60 @@
   &__right p {
     margin: 0;
     &:not(:last-child) {
-      margin-bottom: 1em;
-      @include big-tablet {
-        margin-bottom: 0;
+      margin-bottom: 0em;
+    }
+  }
+}
+@media (min-width: 651px) {
+  .text {
+    margin-bottom: 48px;
+  }
+}
+@media (min-width: 769px) {
+  .text {
+    &__right {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+// min-width: 900px (для flex и max-width)
+@media (min-width: 900px) {
+  .text {
+    &__container {
+      gap: 40px;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__left {
+      max-width: 100%;
+    }
+    &__right {
+      max-width: 520px;
+    }
+  }
+}
+
+// min-width: 1150px (big-tablet)
+@media (min-width: 1150px) {
+  .text {
+    margin-bottom: 84px;
+    &__left {
+      max-width: 540px;
+    }
+    &__left p,
+    &__right p {
+      &:not(:last-child) {
+        margin-bottom: 1em;
       }
     }
+  }
+}
+
+// min-width: 1441px (десктоп)
+@media (min-width: 1441px) {
+  .text {
   }
 }
