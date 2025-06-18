@@ -5,13 +5,22 @@
   &__close {
     top: 50px;
     right: 50px;
+    @include mobile {
+      top: 25px;
+      right: 25px;
+    }
+    svg {
+      fill: var(--color-white);
+    }
   }
   &__slider {
     width: 100%;
     .owl-item.center .item {
       display: flex;
       transform: scale(1.5);
-
+      @include mobile {
+        transform: scale(1);
+      }
       &::after {
         opacity: 0;
       }
@@ -35,6 +44,15 @@
     width: 305px;
     height: 540px;
     transition: transform 0.3s ease-in;
+    @include small-tablet {
+      width: 284px;
+      height: 500px;
+    }
+    @include mobile {
+      max-height: 95vh;
+      max-width: 90vw;
+      margin: 0 5px;
+    }
     &::after {
       content: "";
       position: absolute;

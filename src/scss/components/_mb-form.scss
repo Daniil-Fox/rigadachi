@@ -5,6 +5,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in;
+  position: relative;
   &__wrapper {
     padding: 32px 40px;
   }
@@ -15,7 +16,11 @@
     margin-bottom: 16px;
     color: #82829e;
   }
-
+  &__close {
+    svg {
+      fill: var(--color-white);
+    }
+  }
   &__form {
   }
 }

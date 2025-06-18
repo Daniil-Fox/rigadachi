@@ -384,9 +384,7 @@
           </svg>
           <span>285 м²</span>
         </div>
-      </div>
 
-      <div class="modal-build__row">
         <div class="modal-build__price title5 title5--grey">
           от 11 950 000 ₽
         </div>
@@ -415,13 +413,18 @@
             </svg>
             Скачать информацию
           </a>
-          <a href="#" class="btn btn--green btn-reset modal-build__btn">
+          <a
+            href="#"
+            class="btn btn--green btn-reset modal-build__btn"
+            data-modal-open="modalCta"
+            data-modal-prevent="mbForm"
+          >
             Заказать звонок
           </a>
         </div>
       </div>
 
-      <div class="modal-build__form mb-form">
+      <div class="modal-build__form mb-form" id="mbForm">
         <div class="mb-form__wrapper">
           <div class="mb-form__header">
             <p class="title5 title5--light mb-form__title">
@@ -431,6 +434,11 @@
               и запишитесь на персональную экскурсию
             </p>
             <form action="#" class="form mb-form__form">
+              <button class="btn-reset modal__close mb-form__close">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#cross"></use>
+                </svg>
+              </button>
               <div class="form__row">
                 <label class="form__label">
                   <input

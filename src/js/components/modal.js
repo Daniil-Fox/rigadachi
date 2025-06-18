@@ -3,9 +3,32 @@ export const initModals = () => {
   const closeButtons = document.querySelectorAll("[data-modal-close]");
 
   openButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modalId = button.getAttribute("data-modal-open");
-      const modal = document.getElementById(modalId);
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      let modal = null;
+      if (
+        window.innerWidth > 768 &&
+        button.getAttribute("data-modal-prevent")
+      ) {
+        const preventId = button.getAttribute("data-modal-prevent");
+        const mbform = document.getElementById(preventId);
+
+        if (mbform) {
+          const closeBtn = mbform.querySelector(".mb-form__close");
+
+          let isActive = mbform.classList.toggle("active");
+          mbform.style.maxHeight = isActive ? mbform.scrollHeight + "px" : null;
+
+          closeBtn?.addEventListener("click", (e) => {
+            e.preventDefault();
+            mbform.classList.remove("active");
+            mbform.style.maxHeight = null;
+          });
+        }
+      } else {
+        const modalId = button.getAttribute("data-modal-open");
+        modal = document.getElementById(modalId);
+      }
       if (modal) {
         modal.classList.add("modal--open");
         document.body.style.overflow = "hidden";
