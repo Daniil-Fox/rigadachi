@@ -16785,6 +16785,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
 /* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
 /* harmony import */ var _components_about_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/about.js */ "./src/js/components/about.js");
+/* harmony import */ var _components_history_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/history.js */ "./src/js/components/history.js");
+
 
 
 
@@ -16799,6 +16801,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_infra_js__WEBPACK_IMPORTED_MODULE_5__.initInfraCards)();
 (0,_components_modal_js__WEBPACK_IMPORTED_MODULE_6__.initModals)();
 (0,_components_about_js__WEBPACK_IMPORTED_MODULE_8__.initClickAbout)();
+(0,_components_history_js__WEBPACK_IMPORTED_MODULE_9__.initHistoryCards)();
 
 /***/ }),
 
@@ -16892,6 +16895,32 @@ function initHeader() {
 
 /***/ }),
 
+/***/ "./src/js/components/history.js":
+/*!**************************************!*\
+  !*** ./src/js/components/history.js ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initHistoryCards: () => (/* binding */ initHistoryCards)
+/* harmony export */ });
+function initHistoryCards() {
+  const historyCards = document.querySelectorAll(".history-item");
+  if (historyCards.length > 0) {
+    historyCards.forEach(card => {
+      card.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.code === "Enter") {
+          card.click();
+        }
+      });
+    });
+  }
+}
+
+/***/ }),
+
 /***/ "./src/js/components/infra.js":
 /*!************************************!*\
   !*** ./src/js/components/infra.js ***!
@@ -16919,6 +16948,11 @@ function initInfraCards() {
       });
       card.addEventListener("blur", e => {
         text.style.maxHeight = null;
+      });
+      card.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.code === "Enter") {
+          card.click();
+        }
       });
     });
   }

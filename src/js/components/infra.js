@@ -15,6 +15,11 @@ export function initInfraCards() {
       card.addEventListener("blur", (e) => {
         text.style.maxHeight = null;
       });
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.code === "Enter") {
+          card.click();
+        }
+      });
     });
   }
 }

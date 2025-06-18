@@ -2414,6 +2414,18 @@ a {
     opacity: 1;
   }
 }
+.history-item:focus {
+  outline: none;
+}
+.history-item:focus::after {
+  opacity: 1;
+}
+.history-item:focus .history-item__capture {
+  opacity: 1;
+}
+.history-item:focus .history-item__img::before {
+  opacity: 1;
+}
 
 .arch {
   padding: 120px 0 140px;

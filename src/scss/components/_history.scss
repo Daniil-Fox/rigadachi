@@ -139,4 +139,17 @@
       opacity: 1;
     }
   }
+
+  &:focus {
+    outline: none;
+    &::after {
+      opacity: 1;
+    }
+    .history-item__capture {
+      opacity: 1;
+    }
+    .history-item__img::before {
+      opacity: 1;
+    }
+  }
 }
