@@ -27,6 +27,7 @@
 
   &__img {
     display: none;
+    transition: transform 0.3s ease;
     img {
       display: block;
       width: 100%;

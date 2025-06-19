@@ -19,7 +19,7 @@
     z-index: 3;
     & > #map {
       background: #e3ecdb;
-
+      height: 460px;
       position: static;
       margin-left: calc(-1 * var(--container-offset));
       margin-right: calc(-1 * var(--container-offset));
@@ -229,7 +229,6 @@
     }
 
     &__map > #map {
-      height: 460px;
       margin: 0;
     }
 

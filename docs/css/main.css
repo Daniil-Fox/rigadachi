@@ -2883,6 +2883,10 @@ a {
 }
 .cta__img {
   display: none;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .cta__img img {
   display: block;
@@ -3123,6 +3127,7 @@ a {
 }
 .place__map > #map {
   background: #e3ecdb;
+  height: 460px;
   position: static;
   margin-left: calc(-1 * var(--container-offset));
   margin-right: calc(-1 * var(--container-offset));
@@ -3343,7 +3348,6 @@ a {
     margin-bottom: 48px;
   }
   .place__map > #map {
-    height: 460px;
     margin: 0;
   }
   .place__list {

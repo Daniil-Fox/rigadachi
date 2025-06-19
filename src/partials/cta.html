@@ -1,7 +1,7 @@
 <section class="cta">
   <div class="container">
     <div class="cta__container">
-      <div class="cta__content">
+      <div class="cta__content" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
         <h2 class="title3 title3--light cta__title">Получите консультацию</h2>
         <p class="desc2 desc2--grey cta__subtitle">
           и запишитесь на персональную экскурсию
@@ -9,29 +9,14 @@
 
         <form action="#" class="form cta__form" id="ctaForm">
           <label class="form__label">
-            <input
-              type="text"
-              placeholder="Имя"
-              name="Имя"
-              class="form__input input-name"
-            />
+            <input type="text" placeholder="Имя" name="Имя" class="form__input input-name" />
           </label>
           <label class="form__label">
-            <input
-              type="tel"
-              placeholder="Телефон"
-              name="Телефон"
-              class="form__input input-tel"
-            />
+            <input type="tel" placeholder="Телефон" name="Телефон" class="form__input input-tel" />
           </label>
           <button class="btn-reset btn form__btn">Получить консультацию</button>
           <label class="form__agree">
-            <input
-              type="checkbox"
-              name="Согласие с политикой"
-              class="visually-hidden"
-              checked
-            />
+            <input type="checkbox" name="Согласие с политикой" class="visually-hidden" checked />
             <div class="form__check"></div>
             <span>
               Согласен на обработку
@@ -41,17 +26,10 @@
         </form>
       </div>
 
-      <div class="cta__img">
+      <div class="cta__img rellax" data-rellax-speed="1" data-rellax-percentage="0.5">
         <picture>
           <source srcset="./img/benefits/01.webp" type="image/webp" />
-          <img
-            loading="lazy"
-            src="./img/benefits/01.jpg"
-            class="image"
-            width="610"
-            height="540"
-            alt="Фото здания"
-          />
+          <img loading="lazy" src="./img/benefits/01.jpg" class="image" width="610" height="540" alt="Фото здания" />
         </picture>
       </div>
     </div>

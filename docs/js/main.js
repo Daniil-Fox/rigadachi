@@ -773,6 +773,17 @@ const s=(s,t="",c)=>{s&&s.classList&&t.split(" ").forEach((t=>{t&&s.classList.to
 
 /***/ }),
 
+/***/ "./node_modules/aos/dist/aos.js":
+/*!**************************************!*\
+  !*** ./node_modules/aos/dist/aos.js ***!
+  \**************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():0}(this,function(){"use strict";var e="undefined"!=typeof window?window:"undefined"!=typeof __webpack_require__.g?__webpack_require__.g:"undefined"!=typeof self?self:{},t="Expected a function",n=NaN,o="[object Symbol]",i=/^\s+|\s+$/g,a=/^[-+]0x[0-9a-f]+$/i,r=/^0b[01]+$/i,c=/^0o[0-7]+$/i,s=parseInt,u="object"==typeof e&&e&&e.Object===Object&&e,d="object"==typeof self&&self&&self.Object===Object&&self,l=u||d||Function("return this")(),f=Object.prototype.toString,m=Math.max,p=Math.min,b=function(){return l.Date.now()};function v(e,n,o){var i,a,r,c,s,u,d=0,l=!1,f=!1,v=!0;if("function"!=typeof e)throw new TypeError(t);function y(t){var n=i,o=a;return i=a=void 0,d=t,c=e.apply(o,n)}function h(e){var t=e-u;return void 0===u||t>=n||t<0||f&&e-d>=r}function k(){var e=b();if(h(e))return x(e);s=setTimeout(k,function(e){var t=n-(e-u);return f?p(t,r-(e-d)):t}(e))}function x(e){return s=void 0,v&&i?y(e):(i=a=void 0,c)}function O(){var e=b(),t=h(e);if(i=arguments,a=this,u=e,t){if(void 0===s)return function(e){return d=e,s=setTimeout(k,n),l?y(e):c}(u);if(f)return s=setTimeout(k,n),y(u)}return void 0===s&&(s=setTimeout(k,n)),c}return n=w(n)||0,g(o)&&(l=!!o.leading,r=(f="maxWait"in o)?m(w(o.maxWait)||0,n):r,v="trailing"in o?!!o.trailing:v),O.cancel=function(){void 0!==s&&clearTimeout(s),d=0,i=u=a=s=void 0},O.flush=function(){return void 0===s?c:x(b())},O}function g(e){var t=typeof e;return!!e&&("object"==t||"function"==t)}function w(e){if("number"==typeof e)return e;if(function(e){return"symbol"==typeof e||function(e){return!!e&&"object"==typeof e}(e)&&f.call(e)==o}(e))return n;if(g(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=g(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(i,"");var u=r.test(e);return u||c.test(e)?s(e.slice(2),u?2:8):a.test(e)?n:+e}var y=function(e,n,o){var i=!0,a=!0;if("function"!=typeof e)throw new TypeError(t);return g(o)&&(i="leading"in o?!!o.leading:i,a="trailing"in o?!!o.trailing:a),v(e,n,{leading:i,maxWait:n,trailing:a})},h="Expected a function",k=NaN,x="[object Symbol]",O=/^\s+|\s+$/g,j=/^[-+]0x[0-9a-f]+$/i,E=/^0b[01]+$/i,N=/^0o[0-7]+$/i,z=parseInt,C="object"==typeof e&&e&&e.Object===Object&&e,A="object"==typeof self&&self&&self.Object===Object&&self,q=C||A||Function("return this")(),L=Object.prototype.toString,T=Math.max,M=Math.min,S=function(){return q.Date.now()};function D(e){var t=typeof e;return!!e&&("object"==t||"function"==t)}function H(e){if("number"==typeof e)return e;if(function(e){return"symbol"==typeof e||function(e){return!!e&&"object"==typeof e}(e)&&L.call(e)==x}(e))return k;if(D(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=D(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(O,"");var n=E.test(e);return n||N.test(e)?z(e.slice(2),n?2:8):j.test(e)?k:+e}var $=function(e,t,n){var o,i,a,r,c,s,u=0,d=!1,l=!1,f=!0;if("function"!=typeof e)throw new TypeError(h);function m(t){var n=o,a=i;return o=i=void 0,u=t,r=e.apply(a,n)}function p(e){var n=e-s;return void 0===s||n>=t||n<0||l&&e-u>=a}function b(){var e=S();if(p(e))return v(e);c=setTimeout(b,function(e){var n=t-(e-s);return l?M(n,a-(e-u)):n}(e))}function v(e){return c=void 0,f&&o?m(e):(o=i=void 0,r)}function g(){var e=S(),n=p(e);if(o=arguments,i=this,s=e,n){if(void 0===c)return function(e){return u=e,c=setTimeout(b,t),d?m(e):r}(s);if(l)return c=setTimeout(b,t),m(s)}return void 0===c&&(c=setTimeout(b,t)),r}return t=H(t)||0,D(n)&&(d=!!n.leading,a=(l="maxWait"in n)?T(H(n.maxWait)||0,t):a,f="trailing"in n?!!n.trailing:f),g.cancel=function(){void 0!==c&&clearTimeout(c),u=0,o=s=i=c=void 0},g.flush=function(){return void 0===c?r:v(S())},g},W=function(){};function P(e){e&&e.forEach(function(e){var t=Array.prototype.slice.call(e.addedNodes),n=Array.prototype.slice.call(e.removedNodes);if(function e(t){var n=void 0,o=void 0;for(n=0;n<t.length;n+=1){if((o=t[n]).dataset&&o.dataset.aos)return!0;if(o.children&&e(o.children))return!0}return!1}(t.concat(n)))return W()})}function Y(){return window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver}var _={isSupported:function(){return!!Y()},ready:function(e,t){var n=window.document,o=new(Y())(P);W=t,o.observe(n.documentElement,{childList:!0,subtree:!0,removedNodes:!0})}},B=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")},F=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),I=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},K=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,G=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,J=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,Q=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i;function R(){return navigator.userAgent||navigator.vendor||window.opera||""}var U=new(function(){function e(){B(this,e)}return F(e,[{key:"phone",value:function(){var e=R();return!(!K.test(e)&&!G.test(e.substr(0,4)))}},{key:"mobile",value:function(){var e=R();return!(!J.test(e)&&!Q.test(e.substr(0,4)))}},{key:"tablet",value:function(){return this.mobile()&&!this.phone()}},{key:"ie11",value:function(){return"-ms-scroll-limit"in document.documentElement.style&&"-ms-ime-align"in document.documentElement.style}}]),e}()),V=function(e,t){var n=void 0;return U.ie11()?(n=document.createEvent("CustomEvent")).initCustomEvent(e,!0,!0,{detail:t}):n=new CustomEvent(e,{detail:t}),document.dispatchEvent(n)},X=function(e){return e.forEach(function(e,t){return function(e,t){var n=e.options,o=e.position,i=e.node,a=(e.data,function(){e.animated&&(function(e,t){t&&t.forEach(function(t){return e.classList.remove(t)})}(i,n.animatedClassNames),V("aos:out",i),e.options.id&&V("aos:in:"+e.options.id,i),e.animated=!1)});n.mirror&&t>=o.out&&!n.once?a():t>=o.in?e.animated||(function(e,t){t&&t.forEach(function(t){return e.classList.add(t)})}(i,n.animatedClassNames),V("aos:in",i),e.options.id&&V("aos:in:"+e.options.id,i),e.animated=!0):e.animated&&!n.once&&a()}(e,window.pageYOffset)})},Z=function(e){for(var t=0,n=0;e&&!isNaN(e.offsetLeft)&&!isNaN(e.offsetTop);)t+=e.offsetLeft-("BODY"!=e.tagName?e.scrollLeft:0),n+=e.offsetTop-("BODY"!=e.tagName?e.scrollTop:0),e=e.offsetParent;return{top:n,left:t}},ee=function(e,t,n){var o=e.getAttribute("data-aos-"+t);if(void 0!==o){if("true"===o)return!0;if("false"===o)return!1}return o||n},te=function(e,t){return e.forEach(function(e,n){var o=ee(e.node,"mirror",t.mirror),i=ee(e.node,"once",t.once),a=ee(e.node,"id"),r=t.useClassNames&&e.node.getAttribute("data-aos"),c=[t.animatedClassName].concat(r?r.split(" "):[]).filter(function(e){return"string"==typeof e});t.initClassName&&e.node.classList.add(t.initClassName),e.position={in:function(e,t,n){var o=window.innerHeight,i=ee(e,"anchor"),a=ee(e,"anchor-placement"),r=Number(ee(e,"offset",a?0:t)),c=a||n,s=e;i&&document.querySelectorAll(i)&&(s=document.querySelectorAll(i)[0]);var u=Z(s).top-o;switch(c){case"top-bottom":break;case"center-bottom":u+=s.offsetHeight/2;break;case"bottom-bottom":u+=s.offsetHeight;break;case"top-center":u+=o/2;break;case"center-center":u+=o/2+s.offsetHeight/2;break;case"bottom-center":u+=o/2+s.offsetHeight;break;case"top-top":u+=o;break;case"bottom-top":u+=o+s.offsetHeight;break;case"center-top":u+=o+s.offsetHeight/2}return u+r}(e.node,t.offset,t.anchorPlacement),out:o&&function(e,t){window.innerHeight;var n=ee(e,"anchor"),o=ee(e,"offset",t),i=e;return n&&document.querySelectorAll(n)&&(i=document.querySelectorAll(n)[0]),Z(i).top+i.offsetHeight-o}(e.node,t.offset)},e.options={once:i,mirror:o,animatedClassNames:c,id:a}}),e},ne=function(){var e=document.querySelectorAll("[data-aos]");return Array.prototype.map.call(e,function(e){return{node:e}})},oe=[],ie=!1,ae={offset:120,delay:0,easing:"ease",duration:400,disable:!1,once:!1,mirror:!1,anchorPlacement:"top-bottom",startEvent:"DOMContentLoaded",animatedClassName:"aos-animate",initClassName:"aos-init",useClassNames:!1,disableMutationObserver:!1,throttleDelay:99,debounceDelay:50},re=function(){return document.all&&!window.atob},ce=function(){arguments.length>0&&void 0!==arguments[0]&&arguments[0]&&(ie=!0),ie&&(oe=te(oe,ae),X(oe),window.addEventListener("scroll",y(function(){X(oe,ae.once)},ae.throttleDelay)))},se=function(){if(oe=ne(),de(ae.disable)||re())return ue();ce()},ue=function(){oe.forEach(function(e,t){e.node.removeAttribute("data-aos"),e.node.removeAttribute("data-aos-easing"),e.node.removeAttribute("data-aos-duration"),e.node.removeAttribute("data-aos-delay"),ae.initClassName&&e.node.classList.remove(ae.initClassName),ae.animatedClassName&&e.node.classList.remove(ae.animatedClassName)})},de=function(e){return!0===e||"mobile"===e&&U.mobile()||"phone"===e&&U.phone()||"tablet"===e&&U.tablet()||"function"==typeof e&&!0===e()};return{init:function(e){return ae=I(ae,e),oe=ne(),ae.disableMutationObserver||_.isSupported()||(console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '),ae.disableMutationObserver=!0),ae.disableMutationObserver||_.ready("[data-aos]",se),de(ae.disable)||re()?ue():(document.querySelector("body").setAttribute("data-aos-easing",ae.easing),document.querySelector("body").setAttribute("data-aos-duration",ae.duration),document.querySelector("body").setAttribute("data-aos-delay",ae.delay),-1===["DOMContentLoaded","load"].indexOf(ae.startEvent)?document.addEventListener(ae.startEvent,function(){ce(!0)}):window.addEventListener("load",function(){ce(!0)}),"DOMContentLoaded"===ae.startEvent&&["complete","interactive"].indexOf(document.readyState)>-1&&ce(!0),window.addEventListener("resize",$(ce,ae.debounceDelay,!0)),window.addEventListener("orientationchange",$(ce,ae.debounceDelay,!0)),oe)},refresh:ce,refreshHard:se}});
+
+
+/***/ }),
+
 /***/ "./node_modules/inputmask/dist/inputmask.es6.js":
 /*!******************************************************!*\
   !*** ./node_modules/inputmask/dist/inputmask.es6.js ***!
@@ -6167,6 +6178,509 @@ class JustValidate {
   }
 }
 
+
+
+/***/ }),
+
+/***/ "./node_modules/rellax/rellax.js":
+/*!***************************************!*\
+  !*** ./node_modules/rellax/rellax.js ***!
+  \***************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+// ------------------------------------------
+// Rellax.js
+// Buttery smooth parallax library
+// Copyright (c) 2016 Moe Amaya (@moeamaya)
+// MIT license
+//
+// Thanks to Paraxify.js and Jaime Cabllero
+// for parallax concepts
+// ------------------------------------------
+
+(function (root, factory) {
+  if (true) {
+    // AMD. Register as an anonymous module.
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else // removed by dead control flow
+{}
+}(typeof window !== "undefined" ? window : __webpack_require__.g, function () {
+  var Rellax = function(el, options){
+    "use strict";
+
+    var self = Object.create(Rellax.prototype);
+
+    var posY = 0;
+    var screenY = 0;
+    var posX = 0;
+    var screenX = 0;
+    var blocks = [];
+    var pause = true;
+
+    // check what requestAnimationFrame to use, and if
+    // it's not supported, use the onscroll event
+    var loop = window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      function(callback){ return setTimeout(callback, 1000 / 60); };
+
+    // store the id for later use
+    var loopId = null;
+
+    // Test via a getter in the options object to see if the passive property is accessed
+    var supportsPassive = false;
+    try {
+      var opts = Object.defineProperty({}, 'passive', {
+        get: function() {
+          supportsPassive = true;
+        }
+      });
+      window.addEventListener("testPassive", null, opts);
+      window.removeEventListener("testPassive", null, opts);
+    } catch (e) {}
+
+    // check what cancelAnimation method to use
+    var clearLoop = window.cancelAnimationFrame || window.mozCancelAnimationFrame || clearTimeout;
+
+    // check which transform property to use
+    var transformProp = window.transformProp || (function(){
+        var testEl = document.createElement('div');
+        if (testEl.style.transform === null) {
+          var vendors = ['Webkit', 'Moz', 'ms'];
+          for (var vendor in vendors) {
+            if (testEl.style[ vendors[vendor] + 'Transform' ] !== undefined) {
+              return vendors[vendor] + 'Transform';
+            }
+          }
+        }
+        return 'transform';
+      })();
+
+    // Default Settings
+    self.options = {
+      speed: -2,
+	    verticalSpeed: null,
+	    horizontalSpeed: null,
+      breakpoints: [576, 768, 1201],
+      center: false,
+      wrapper: null,
+      relativeToWrapper: false,
+      round: true,
+      vertical: true,
+      horizontal: false,
+      verticalScrollAxis: "y",
+      horizontalScrollAxis: "x",
+      callback: function() {},
+    };
+
+    // User defined options (might have more in the future)
+    if (options){
+      Object.keys(options).forEach(function(key){
+        self.options[key] = options[key];
+      });
+    }
+
+    function validateCustomBreakpoints () {
+      if (self.options.breakpoints.length === 3 && Array.isArray(self.options.breakpoints)) {
+        var isAscending = true;
+        var isNumerical = true;
+        var lastVal;
+        self.options.breakpoints.forEach(function (i) {
+          if (typeof i !== 'number') isNumerical = false;
+          if (lastVal !== null) {
+            if (i < lastVal) isAscending = false;
+          }
+          lastVal = i;
+        });
+        if (isAscending && isNumerical) return;
+      }
+      // revert defaults if set incorrectly
+      self.options.breakpoints = [576, 768, 1201];
+      console.warn("Rellax: You must pass an array of 3 numbers in ascending order to the breakpoints option. Defaults reverted");
+    }
+
+    if (options && options.breakpoints) {
+      validateCustomBreakpoints();
+    }
+
+    // By default, rellax class
+    if (!el) {
+      el = '.rellax';
+    }
+
+    // check if el is a className or a node
+    var elements = typeof el === 'string' ? document.querySelectorAll(el) : [el];
+
+    // Now query selector
+    if (elements.length > 0) {
+      self.elems = elements;
+    }
+
+    // The elements don't exist
+    else {
+      console.warn("Rellax: The elements you're trying to select don't exist.");
+      return;
+    }
+
+    // Has a wrapper and it exists
+    if (self.options.wrapper) {
+      if (!self.options.wrapper.nodeType) {
+        var wrapper = document.querySelector(self.options.wrapper);
+
+        if (wrapper) {
+          self.options.wrapper = wrapper;
+        } else {
+          console.warn("Rellax: The wrapper you're trying to use doesn't exist.");
+          return;
+        }
+      }
+    }
+
+    // set a placeholder for the current breakpoint
+    var currentBreakpoint;
+
+    // helper to determine current breakpoint
+    var getCurrentBreakpoint = function (w) {
+      var bp = self.options.breakpoints;
+      if (w < bp[0]) return 'xs';
+      if (w >= bp[0] && w < bp[1]) return 'sm';
+      if (w >= bp[1] && w < bp[2]) return 'md';
+      return 'lg';
+    };
+
+    // Get and cache initial position of all elements
+    var cacheBlocks = function() {
+      for (var i = 0; i < self.elems.length; i++){
+        var block = createBlock(self.elems[i]);
+        blocks.push(block);
+      }
+    };
+
+
+    // Let's kick this script off
+    // Build array for cached element values
+    var init = function() {
+      for (var i = 0; i < blocks.length; i++){
+        self.elems[i].style.cssText = blocks[i].style;
+      }
+
+      blocks = [];
+
+      screenY = window.innerHeight;
+      screenX = window.innerWidth;
+      currentBreakpoint = getCurrentBreakpoint(screenX);
+
+      setPosition();
+
+      cacheBlocks();
+
+      animate();
+
+      // If paused, unpause and set listener for window resizing events
+      if (pause) {
+        window.addEventListener('resize', init);
+        pause = false;
+        // Start the loop
+        update();
+      }
+    };
+
+    // We want to cache the parallax blocks'
+    // values: base, top, height, speed
+    // el: is dom object, return: el cache values
+    var createBlock = function(el) {
+      var dataPercentage = el.getAttribute( 'data-rellax-percentage' );
+      var dataSpeed = el.getAttribute( 'data-rellax-speed' );
+      var dataXsSpeed = el.getAttribute( 'data-rellax-xs-speed' );
+      var dataMobileSpeed = el.getAttribute( 'data-rellax-mobile-speed' );
+      var dataTabletSpeed = el.getAttribute( 'data-rellax-tablet-speed' );
+      var dataDesktopSpeed = el.getAttribute( 'data-rellax-desktop-speed' );
+      var dataVerticalSpeed = el.getAttribute('data-rellax-vertical-speed');
+      var dataHorizontalSpeed = el.getAttribute('data-rellax-horizontal-speed');
+      var dataVericalScrollAxis = el.getAttribute('data-rellax-vertical-scroll-axis');
+      var dataHorizontalScrollAxis = el.getAttribute('data-rellax-horizontal-scroll-axis');
+      var dataZindex = el.getAttribute( 'data-rellax-zindex' ) || 0;
+      var dataMin = el.getAttribute( 'data-rellax-min' );
+      var dataMax = el.getAttribute( 'data-rellax-max' );
+      var dataMinX = el.getAttribute('data-rellax-min-x');
+      var dataMaxX = el.getAttribute('data-rellax-max-x');
+      var dataMinY = el.getAttribute('data-rellax-min-y');
+      var dataMaxY = el.getAttribute('data-rellax-max-y');
+      var mapBreakpoints;
+      var breakpoints = true;
+
+      if (!dataXsSpeed && !dataMobileSpeed && !dataTabletSpeed && !dataDesktopSpeed) {
+        breakpoints = false;
+      } else {
+        mapBreakpoints = {
+          'xs': dataXsSpeed,
+          'sm': dataMobileSpeed,
+          'md': dataTabletSpeed,
+          'lg': dataDesktopSpeed
+        };
+      }
+
+      // initializing at scrollY = 0 (top of browser), scrollX = 0 (left of browser)
+      // ensures elements are positioned based on HTML layout.
+      //
+      // If the element has the percentage attribute, the posY and posX needs to be
+      // the current scroll position's value, so that the elements are still positioned based on HTML layout
+      var wrapperPosY = self.options.wrapper ? self.options.wrapper.scrollTop : (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop);
+      // If the option relativeToWrapper is true, use the wrappers offset to top, subtracted from the current page scroll.
+      if (self.options.relativeToWrapper) {
+        var scrollPosY = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop);
+        wrapperPosY = scrollPosY - self.options.wrapper.offsetTop;
+      }
+      var posY = self.options.vertical ? ( dataPercentage || self.options.center ? wrapperPosY : 0 ) : 0;
+      var posX = self.options.horizontal ? ( dataPercentage || self.options.center ? self.options.wrapper ? self.options.wrapper.scrollLeft : (window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft) : 0 ) : 0;
+
+      var blockTop = posY + el.getBoundingClientRect().top;
+      var blockHeight = el.clientHeight || el.offsetHeight || el.scrollHeight;
+
+      var blockLeft = posX + el.getBoundingClientRect().left;
+      var blockWidth = el.clientWidth || el.offsetWidth || el.scrollWidth;
+
+      // apparently parallax equation everyone uses
+      var percentageY = dataPercentage ? dataPercentage : (posY - blockTop + screenY) / (blockHeight + screenY);
+      var percentageX = dataPercentage ? dataPercentage : (posX - blockLeft + screenX) / (blockWidth + screenX);
+      if(self.options.center){ percentageX = 0.5; percentageY = 0.5; }
+
+      // Optional individual block speed as data attr, otherwise global speed
+      var speed = (breakpoints && mapBreakpoints[currentBreakpoint] !== null) ? Number(mapBreakpoints[currentBreakpoint]) : (dataSpeed ? dataSpeed : self.options.speed);
+      var verticalSpeed = dataVerticalSpeed ? dataVerticalSpeed : self.options.verticalSpeed;
+      var horizontalSpeed = dataHorizontalSpeed ? dataHorizontalSpeed : self.options.horizontalSpeed;
+
+      // Optional individual block movement axis direction as data attr, otherwise gobal movement direction
+      var verticalScrollAxis = dataVericalScrollAxis ? dataVericalScrollAxis : self.options.verticalScrollAxis;
+      var horizontalScrollAxis = dataHorizontalScrollAxis ? dataHorizontalScrollAxis : self.options.horizontalScrollAxis;
+
+      var bases = updatePosition(percentageX, percentageY, speed, verticalSpeed, horizontalSpeed);
+
+      // ~~Store non-translate3d transforms~~
+      // Store inline styles and extract transforms
+      var style = el.style.cssText;
+      var transform = '';
+
+      // Check if there's an inline styled transform
+      var searchResult = /transform\s*:/i.exec(style);
+      if (searchResult) {
+        // Get the index of the transform
+        var index = searchResult.index;
+
+        // Trim the style to the transform point and get the following semi-colon index
+        var trimmedStyle = style.slice(index);
+        var delimiter = trimmedStyle.indexOf(';');
+
+        // Remove "transform" string and save the attribute
+        if (delimiter) {
+          transform = " " + trimmedStyle.slice(11, delimiter).replace(/\s/g,'');
+        } else {
+          transform = " " + trimmedStyle.slice(11).replace(/\s/g,'');
+        }
+      }
+
+      return {
+        baseX: bases.x,
+        baseY: bases.y,
+        top: blockTop,
+        left: blockLeft,
+        height: blockHeight,
+        width: blockWidth,
+        speed: speed,
+        verticalSpeed: verticalSpeed,
+        horizontalSpeed: horizontalSpeed,
+        verticalScrollAxis: verticalScrollAxis,
+        horizontalScrollAxis: horizontalScrollAxis,
+        style: style,
+        transform: transform,
+        zindex: dataZindex,
+        min: dataMin,
+        max: dataMax,
+        minX: dataMinX,
+        maxX: dataMaxX,
+        minY: dataMinY,
+        maxY: dataMaxY
+      };
+    };
+
+    // set scroll position (posY, posX)
+    // side effect method is not ideal, but okay for now
+    // returns true if the scroll changed, false if nothing happened
+    var setPosition = function() {
+      var oldY = posY;
+      var oldX = posX;
+
+      posY = self.options.wrapper ? self.options.wrapper.scrollTop : (document.documentElement || document.body.parentNode || document.body).scrollTop || window.pageYOffset;
+      posX = self.options.wrapper ? self.options.wrapper.scrollLeft : (document.documentElement || document.body.parentNode || document.body).scrollLeft || window.pageXOffset;
+      // If option relativeToWrapper is true, use relative wrapper value instead.
+      if (self.options.relativeToWrapper) {
+        var scrollPosY = (document.documentElement || document.body.parentNode || document.body).scrollTop || window.pageYOffset;
+        posY = scrollPosY - self.options.wrapper.offsetTop;
+      }
+
+
+      if (oldY != posY && self.options.vertical) {
+        // scroll changed, return true
+        return true;
+      }
+
+      if (oldX != posX && self.options.horizontal) {
+        // scroll changed, return true
+        return true;
+      }
+
+      // scroll did not change
+      return false;
+    };
+
+    // Ahh a pure function, gets new transform value
+    // based on scrollPosition and speed
+    // Allow for decimal pixel values
+    var updatePosition = function(percentageX, percentageY, speed, verticalSpeed, horizontalSpeed) {
+      var result = {};
+      var valueX = ((horizontalSpeed ? horizontalSpeed : speed) * (100 * (1 - percentageX)));
+      var valueY = ((verticalSpeed ? verticalSpeed : speed) * (100 * (1 - percentageY)));
+
+      result.x = self.options.round ? Math.round(valueX) : Math.round(valueX * 100) / 100;
+      result.y = self.options.round ? Math.round(valueY) : Math.round(valueY * 100) / 100;
+
+      return result;
+    };
+
+    // Remove event listeners and loop again
+    var deferredUpdate = function() {
+      window.removeEventListener('resize', deferredUpdate);
+      window.removeEventListener('orientationchange', deferredUpdate);
+      (self.options.wrapper ? self.options.wrapper : window).removeEventListener('scroll', deferredUpdate);
+      (self.options.wrapper ? self.options.wrapper : document).removeEventListener('touchmove', deferredUpdate);
+
+      // loop again
+      loopId = loop(update);
+    };
+
+    // Loop
+    var update = function() {
+      if (setPosition() && pause === false) {
+        animate();
+
+        // loop again
+        loopId = loop(update);
+      } else {
+        loopId = null;
+
+        // Don't animate until we get a position updating event
+        window.addEventListener('resize', deferredUpdate);
+        window.addEventListener('orientationchange', deferredUpdate);
+        (self.options.wrapper ? self.options.wrapper : window).addEventListener('scroll', deferredUpdate, supportsPassive ? { passive: true } : false);
+        (self.options.wrapper ? self.options.wrapper : document).addEventListener('touchmove', deferredUpdate, supportsPassive ? { passive: true } : false);
+      }
+    };
+
+    // Transform3d on parallax element
+    var animate = function() {
+      var positions;
+      for (var i = 0; i < self.elems.length; i++){
+        // Determine relevant movement directions
+        var verticalScrollAxis = blocks[i].verticalScrollAxis.toLowerCase();
+        var horizontalScrollAxis = blocks[i].horizontalScrollAxis.toLowerCase();
+        var verticalScrollX = verticalScrollAxis.indexOf("x") != -1 ? posY : 0;
+        var verticalScrollY = verticalScrollAxis.indexOf("y") != -1 ? posY : 0;
+        var horizontalScrollX = horizontalScrollAxis.indexOf("x") != -1 ? posX : 0;
+        var horizontalScrollY = horizontalScrollAxis.indexOf("y") != -1 ? posX : 0;
+
+        var percentageY = ((verticalScrollY + horizontalScrollY - blocks[i].top + screenY) / (blocks[i].height + screenY));
+        var percentageX = ((verticalScrollX + horizontalScrollX - blocks[i].left + screenX) / (blocks[i].width + screenX));
+
+        // Subtracting initialize value, so element stays in same spot as HTML
+        positions = updatePosition(percentageX, percentageY, blocks[i].speed, blocks[i].verticalSpeed, blocks[i].horizontalSpeed);
+        var positionY = positions.y - blocks[i].baseY;
+        var positionX = positions.x - blocks[i].baseX;
+
+        // The next two "if" blocks go like this:
+        // Check if a limit is defined (first "min", then "max");
+        // Check if we need to change the Y or the X
+        // (Currently working only if just one of the axes is enabled)
+        // Then, check if the new position is inside the allowed limit
+        // If so, use new position. If not, set position to limit.
+
+        // Check if a min limit is defined
+        if (blocks[i].min !== null) {
+          if (self.options.vertical && !self.options.horizontal) {
+            positionY = positionY <= blocks[i].min ? blocks[i].min : positionY;
+          }
+          if (self.options.horizontal && !self.options.vertical) {
+            positionX = positionX <= blocks[i].min ? blocks[i].min : positionX;
+          }
+        }
+
+        // Check if directional min limits are defined
+        if (blocks[i].minY != null) {
+            positionY = positionY <= blocks[i].minY ? blocks[i].minY : positionY;
+        }
+        if (blocks[i].minX != null) {
+            positionX = positionX <= blocks[i].minX ? blocks[i].minX : positionX;
+        }
+
+        // Check if a max limit is defined
+        if (blocks[i].max !== null) {
+          if (self.options.vertical && !self.options.horizontal) {
+            positionY = positionY >= blocks[i].max ? blocks[i].max : positionY;
+          }
+          if (self.options.horizontal && !self.options.vertical) {
+            positionX = positionX >= blocks[i].max ? blocks[i].max : positionX;
+          }
+        }
+
+        // Check if directional max limits are defined
+        if (blocks[i].maxY != null) {
+            positionY = positionY >= blocks[i].maxY ? blocks[i].maxY : positionY;
+        }
+        if (blocks[i].maxX != null) {
+            positionX = positionX >= blocks[i].maxX ? blocks[i].maxX : positionX;
+        }
+
+        var zindex = blocks[i].zindex;
+
+        // Move that element
+        // (Set the new translation and append initial inline transforms.)
+        var translate = 'translate3d(' + (self.options.horizontal ? positionX : '0') + 'px,' + (self.options.vertical ? positionY : '0') + 'px,' + zindex + 'px) ' + blocks[i].transform;
+        self.elems[i].style[transformProp] = translate;
+      }
+      self.options.callback(positions);
+    };
+
+    self.destroy = function() {
+      for (var i = 0; i < self.elems.length; i++){
+        self.elems[i].style.cssText = blocks[i].style;
+      }
+
+      // Remove resize event listener if not pause, and pause
+      if (!pause) {
+        window.removeEventListener('resize', init);
+        pause = true;
+      }
+
+      // Clear the animation loop to prevent possible memory leak
+      clearLoop(loopId);
+      loopId = null;
+    };
+
+    // Init
+    init();
+
+    // Allow to recalculate the initial values whenever we want
+    self.refresh = init;
+
+    return self;
+  };
+  return Rellax;
+}));
 
 
 /***/ }),
@@ -16779,13 +17293,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fancy_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/fancy.js */ "./src/js/components/fancy.js");
 /* harmony import */ var _components_map_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/map.js */ "./src/js/components/map.js");
 /* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
-/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/header.js */ "./src/js/components/header.js");
-/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_infra_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/infra.js */ "./src/js/components/infra.js");
-/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
-/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
-/* harmony import */ var _components_about_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/about.js */ "./src/js/components/about.js");
-/* harmony import */ var _components_history_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/history.js */ "./src/js/components/history.js");
+/* harmony import */ var _components_aos_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/aos.js */ "./src/js/components/aos.js");
+/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/header.js */ "./src/js/components/header.js");
+/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
+/* harmony import */ var _components_infra_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/infra.js */ "./src/js/components/infra.js");
+/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
+/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
+/* harmony import */ var _components_about_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/about.js */ "./src/js/components/about.js");
+/* harmony import */ var _components_history_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/history.js */ "./src/js/components/history.js");
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
 
 
 
@@ -16796,12 +17312,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_components_header_js__WEBPACK_IMPORTED_MODULE_3__.initHeader)();
-(0,_components_slider_js__WEBPACK_IMPORTED_MODULE_4__.initAllSliders)();
-(0,_components_infra_js__WEBPACK_IMPORTED_MODULE_5__.initInfraCards)();
-(0,_components_modal_js__WEBPACK_IMPORTED_MODULE_6__.initModals)();
-(0,_components_about_js__WEBPACK_IMPORTED_MODULE_8__.initClickAbout)();
-(0,_components_history_js__WEBPACK_IMPORTED_MODULE_9__.initHistoryCards)();
+
+
+const rellax = new rellax__WEBPACK_IMPORTED_MODULE_11__(".rellax", {
+  center: true
+});
+(0,_components_header_js__WEBPACK_IMPORTED_MODULE_4__.initHeader)();
+(0,_components_slider_js__WEBPACK_IMPORTED_MODULE_5__.initAllSliders)();
+(0,_components_infra_js__WEBPACK_IMPORTED_MODULE_6__.initInfraCards)();
+(0,_components_modal_js__WEBPACK_IMPORTED_MODULE_7__.initModals)();
+(0,_components_about_js__WEBPACK_IMPORTED_MODULE_9__.initClickAbout)();
+(0,_components_history_js__WEBPACK_IMPORTED_MODULE_10__.initHistoryCards)();
 
 /***/ }),
 
@@ -16848,6 +17369,52 @@ function initClickAbout() {
     });
   }
 }
+
+/***/ }),
+
+/***/ "./src/js/components/aos.js":
+/*!**********************************!*\
+  !*** ./src/js/components/aos.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+
+aos__WEBPACK_IMPORTED_MODULE_0__.init({
+  disable: false,
+  // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: "DOMContentLoaded",
+  // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: "aos-init",
+  // class applied after initialization
+  animatedClassName: "aos-animate",
+  // class applied on animation
+  useClassNames: false,
+  // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false,
+  // disables automatic mutations' detections (advanced)
+  debounceDelay: 50,
+  // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99,
+  // the delay on throttle used while scrolling the page (advanced)
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 100,
+  // offset (in px) from the original trigger point
+  delay: 0,
+  // values from 0 to 3000, with step 50ms
+  duration: 600,
+  // values from 0 to 3000, with step 50ms
+  easing: "ease",
+  // default easing for AOS animations
+  once: true,
+  // whether animation should happen only once - while scrolling down
+  mirror: false,
+  // whether elements should animate out while scrolling past them
+  anchorPlacement: "center-bottom" // defines which position of the element regarding to window should trigger the animation
+});
 
 /***/ }),
 
@@ -17540,6 +18107,18 @@ const validateForms = (selector, rules, checkboxes = [], afterSend) => {
 /******/ 				}
 /******/ 			}
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
