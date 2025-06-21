@@ -17535,7 +17535,11 @@ function initInfraCards() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-initMap();
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("map")) {
+    initMap();
+  }
+});
 async function initMap() {
   await ymaps3.ready;
   const {
@@ -17830,12 +17834,36 @@ const rules3 = [{
     errorMessage: "Заполните телефон!"
   }]
 }];
-const afterForm = () => {
-  console.log("Произошла отправка, тут можно писать любые действия");
+const afterForm1 = () => {
+  const form = document.querySelector("#modalFormCta");
+  const parent = form.closest(".modal-cta__body");
+  const title = parent.querySelector(".modal-cta__title");
+  const desc = parent.querySelector(".modal-cta__subtitle");
+  form.remove();
+  title.textContent = "Сообщение отправлено";
+  desc.textContent = "Спасибо за обращениее в шану компанию. В течение получаса с Вами свяжется наш специалист для уточнения всех вопросв.";
 };
-(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)("#modalFormCta", rules1, checks1, afterForm);
-(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)("#ctaForm", rules2, checks2, afterForm);
-(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)("#buildForm", rules3, checks3, afterForm);
+const afterForm2 = () => {
+  const form = document.querySelector("#ctaForm");
+  const parent = form.closest(".cta__content ");
+  const title = parent.querySelector(".cta__title");
+  const desc = parent.querySelector(".cta__subtitle");
+  form.remove();
+  title.textContent = "Сообщение отправлено";
+  desc.textContent = "Спасибо за обращениее в шану компанию. В течение получаса с Вами свяжется наш специалист для уточнения всех вопросв.";
+};
+const afterForm3 = () => {
+  const form = document.querySelector("#buildForm");
+  const parent = form.closest(".mb-form__header ");
+  const title = parent.querySelector(".mb-form__title");
+  const desc = parent.querySelector(".mb-form__subtitle");
+  form.remove();
+  title.textContent = "Сообщение отправлено";
+  desc.textContent = "Спасибо за обращениее в шану компанию. В течение получаса с Вами свяжется наш специалист для уточнения всех вопросв.";
+};
+(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)("#modalFormCta", rules1, checks1, afterForm1);
+(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)("#ctaForm", rules2, checks2, afterForm2);
+(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)("#buildForm", rules3, checks3, afterForm3);
 
 /***/ }),
 

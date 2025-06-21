@@ -496,6 +496,9 @@ a {
   line-height: 167%;
   color: #2e2e40;
 }
+.desc1 a {
+  color: var(--color-beige2);
+}
 .desc1--light {
   color: var(--color-white);
 }
@@ -521,6 +524,9 @@ a {
   line-height: 175%;
   color: #2e2e40;
 }
+.desc2 a {
+  color: var(--color-beige2);
+}
 .desc2--light {
   color: var(--color-white);
 }
@@ -540,6 +546,9 @@ a {
   font-size: 14px;
   line-height: 186%;
   color: #2e2e40;
+}
+.desc3 a {
+  color: var(--color-beige2);
 }
 .desc3--light {
   color: var(--color-white);
@@ -1159,7 +1168,8 @@ a {
   .hero {
     padding: 80px 0;
     margin-bottom: 50px;
-    min-height: 710px;
+    height: 100vh;
+    min-height: unset;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 6, 23, 0.5)), to(rgba(5, 6, 23, 0))), url("./../img/hero1280.webp");
     background-image: linear-gradient(180deg, rgba(5, 6, 23, 0.5) 0%, rgba(5, 6, 23, 0) 100%), url("./../img/hero1280.webp");
   }
@@ -1167,14 +1177,12 @@ a {
 @media (min-width: 1281px) {
   .hero {
     margin-bottom: 60px;
-    min-height: 800px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 6, 23, 0.5)), to(rgba(5, 6, 23, 0))), url("./../img/hero.webp");
     background-image: linear-gradient(180deg, rgba(5, 6, 23, 0.5) 0%, rgba(5, 6, 23, 0) 100%), url("./../img/hero.webp");
   }
 }
 @media (min-width: 1441px) {
   .hero {
-    min-height: 956px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 6, 23, 0.5)), to(rgba(5, 6, 23, 0))), url("./../img/hero1920.webp");
     background-image: linear-gradient(180deg, rgba(5, 6, 23, 0.5) 0%, rgba(5, 6, 23, 0) 100%), url("./../img/hero1920.webp");
   }
@@ -1699,14 +1707,41 @@ a {
   gap: 4px;
 }
 .gplan-info__item {
+  border-radius: 4px;
+  padding: 8px 6px;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .gplan-info__item:hover {
+    background-color: var(--text-dark);
+  }
+  .gplan-info__item:hover .gplan-info__wrapper {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+.gplan-info__item:active {
+  background-color: var(--color-beige2);
+}
+.gplan-info__item:active .gplan-info__wrapper {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.gplan-info__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 6px;
   gap: 8px;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 .gplan-info__icon {
   -ms-flex-negative: 0;
@@ -2732,7 +2767,6 @@ a {
 
 .benefit {
   width: 240px;
-  cursor: pointer;
 }
 .benefit__img {
   height: 253px;
@@ -3548,9 +3582,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 @media (max-width: 650px) {
   .stories__slider .owl-item.center .item {
@@ -3664,7 +3698,7 @@ a {
 }
 .modal-build__body {
   max-width: 880px;
-  max-height: 900px;
+  max-height: 90vh;
   overflow-y: auto;
   padding: 48px 60px 40px;
 }

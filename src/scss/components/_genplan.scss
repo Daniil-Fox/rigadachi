@@ -182,10 +182,30 @@
   gap: 4px;
 
   &__item {
+    border-radius: 4px;
+    padding: 8px 6px;
+    transition: background-color 0.3s ease-in;
+    @include hover {
+      background-color: var(--text-dark);
+
+      .gplan-info__wrapper {
+        transform: translateX(10px);
+      }
+    }
+    &:active {
+      background-color: var(--color-beige2);
+      .gplan-info__wrapper {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &__wrapper {
     display: flex;
     align-items: center;
-    padding: 8px 6px;
+
     gap: 8px;
+    transition: transform 0.3s ease-in;
   }
 
   &__icon {

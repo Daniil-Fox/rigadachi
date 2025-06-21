@@ -164,7 +164,9 @@
   font-size: 18px;
   line-height: 167%;
   color: #2e2e40;
-
+  a {
+    color: var(--color-beige2);
+  }
   &--light {
     color: var(--color-white);
   }
@@ -172,6 +174,7 @@
   &--grey {
     color: var(--text-light-grey);
   }
+
   @include tablet {
     font-size: 16px;
   }
@@ -187,7 +190,9 @@
   font-size: 16px;
   line-height: 175%;
   color: #2e2e40;
-
+  a {
+    color: var(--color-beige2);
+  }
   &--light {
     color: var(--color-white);
   }
@@ -208,7 +213,9 @@
   font-size: 14px;
   line-height: 186%;
   color: #2e2e40;
-
+  a {
+    color: var(--color-beige2);
+  }
   &--light {
     color: var(--color-white);
   }

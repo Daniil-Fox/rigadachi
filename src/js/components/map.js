@@ -1,4 +1,8 @@
-initMap();
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("map")) {
+    initMap();
+  }
+});
 
 async function initMap() {
   await ymaps3.ready;

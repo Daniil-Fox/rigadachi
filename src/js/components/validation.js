@@ -108,10 +108,42 @@ const rules3 = [
   },
 ];
 
-const afterForm = () => {
-  console.log("Произошла отправка, тут можно писать любые действия");
+const afterForm1 = () => {
+  const form = document.querySelector("#modalFormCta");
+  const parent = form.closest(".modal-cta__body");
+  const title = parent.querySelector(".modal-cta__title");
+  const desc = parent.querySelector(".modal-cta__subtitle");
+
+  form.remove();
+  title.textContent = "Сообщение отправлено";
+  desc.textContent =
+    "Спасибо за обращениее в шану компанию. В течение получаса с Вами свяжется наш специалист для уточнения всех вопросв.";
 };
 
-validateForms("#modalFormCta", rules1, checks1, afterForm);
-validateForms("#ctaForm", rules2, checks2, afterForm);
-validateForms("#buildForm", rules3, checks3, afterForm);
+const afterForm2 = () => {
+  const form = document.querySelector("#ctaForm");
+  const parent = form.closest(".cta__content ");
+  const title = parent.querySelector(".cta__title");
+  const desc = parent.querySelector(".cta__subtitle");
+
+  form.remove();
+  title.textContent = "Сообщение отправлено";
+  desc.textContent =
+    "Спасибо за обращениее в шану компанию. В течение получаса с Вами свяжется наш специалист для уточнения всех вопросв.";
+};
+
+const afterForm3 = () => {
+  const form = document.querySelector("#buildForm");
+  const parent = form.closest(".mb-form__header ");
+  const title = parent.querySelector(".mb-form__title");
+  const desc = parent.querySelector(".mb-form__subtitle");
+
+  form.remove();
+  title.textContent = "Сообщение отправлено";
+  desc.textContent =
+    "Спасибо за обращениее в шану компанию. В течение получаса с Вами свяжется наш специалист для уточнения всех вопросв.";
+};
+
+validateForms("#modalFormCta", rules1, checks1, afterForm1);
+validateForms("#ctaForm", rules2, checks2, afterForm2);
+validateForms("#buildForm", rules3, checks3, afterForm3);
