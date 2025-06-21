@@ -29,12 +29,6 @@ async function initMap() {
   const markerElement = document.createElement("div");
   markerElement.classList.add("marker");
 
-  const markerImage = document.createElement("img");
-  markerImage.src = location.origin + "/img/svg/map-marker.svg";
-  markerImage.classList.add("image");
-  console.log(markerImage);
-  markerElement.appendChild(markerImage);
-
   markerContainerElement.appendChild(markerElement);
 
   const marker = new YMapMarker(
