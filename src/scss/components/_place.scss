@@ -302,9 +302,13 @@
     }
   }
 }
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .place {
     padding: 120px 0 80px;
+
+    &__container {
+      max-width: 1220px;
+    }
   }
 
   .address {

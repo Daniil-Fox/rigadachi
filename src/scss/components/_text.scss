@@ -57,7 +57,7 @@
     &__container {
       gap: 40px;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
     }
     &__left {
       max-width: 100%;

@@ -321,7 +321,7 @@
       transition: fill 0.3s ease-in;
     }
     .arrow {
-      transition: transform 0.3s ease-in;
+      transition: transform 0.3s ease-in, fill 0.3s ease-in;
     }
     @include hover {
       &::after {
