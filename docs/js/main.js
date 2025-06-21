@@ -17561,7 +17561,7 @@ async function initMap() {
   const markerElement = document.createElement("div");
   markerElement.classList.add("marker");
   const markerImage = document.createElement("img");
-  markerImage.src = "./../img/svg/map-marker.svg";
+  markerImage.src = location.origin + "/img/svg/map-marker.svg";
   markerImage.classList.add("image");
   console.log(markerImage);
   markerElement.appendChild(markerImage);
@@ -17697,12 +17697,29 @@ const initAllSliders = () => {
   //   },
   // });
 
-  const infraSlider = document.querySelectorAll(".modal-infra__slider");
+  const infraSlider = document.querySelectorAll(".modal-infra__body");
   if (infraSlider.length > 0) {
     infraSlider.forEach(slider => {
-      new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(slider, {
+      const swiper = slider.querySelector(".modal-infra__slider");
+      const btnPrev = slider.querySelector(".modal-infra-prev");
+      const btnNext = slider.querySelector(".modal-infra-next");
+      new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(swiper, {
         slidesPerView: "auto",
-        spaceBetween: 10
+        spaceBetween: 10,
+        breakpoints: {
+          320: {
+            slidesPerView: "auto",
+            spaceBetween: 10
+          },
+          769: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          }
+        },
+        navigation: {
+          prevEl: btnPrev,
+          nextEl: btnNext
+        }
       });
     });
   }

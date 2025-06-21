@@ -30,7 +30,7 @@ async function initMap() {
   markerElement.classList.add("marker");
 
   const markerImage = document.createElement("img");
-  markerImage.src = "./../img/svg/map-marker.svg";
+  markerImage.src = location.origin + "/img/svg/map-marker.svg";
   markerImage.classList.add("image");
   console.log(markerImage);
   markerElement.appendChild(markerImage);

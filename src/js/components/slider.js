@@ -57,12 +57,30 @@ export const initAllSliders = () => {
   //   },
   // });
 
-  const infraSlider = document.querySelectorAll(".modal-infra__slider");
+  const infraSlider = document.querySelectorAll(".modal-infra__body");
   if (infraSlider.length > 0) {
     infraSlider.forEach((slider) => {
-      new Swiper(slider, {
+      const swiper = slider.querySelector(".modal-infra__slider");
+      const btnPrev = slider.querySelector(".modal-infra-prev");
+      const btnNext = slider.querySelector(".modal-infra-next");
+      new Swiper(swiper, {
         slidesPerView: "auto",
         spaceBetween: 10,
+
+        breakpoints: {
+          320: {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+          },
+          769: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        },
+        navigation: {
+          prevEl: btnPrev,
+          nextEl: btnNext,
+        },
       });
     });
   }
