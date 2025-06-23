@@ -4158,12 +4158,14 @@ a {
 .modal-cta__body {
   position: relative;
   max-width: 375px;
+  min-height: 620px;
   padding: 113px 20px;
   background-color: #242430;
 }
 @media (max-width: 650px) {
   .modal-cta__body {
     max-width: 100%;
+    min-height: 100%;
   }
 }
 .modal-cta__close {
