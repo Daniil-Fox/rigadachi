@@ -2,6 +2,7 @@ import "./components/fancy.js";
 import "./components/map.js";
 import "./components/validation.js";
 import "./components/aos.js";
+import "./components/benefits.js";
 
 import { initHeader } from "./components/header.js";
 import { initAllSliders } from "./components/slider.js";

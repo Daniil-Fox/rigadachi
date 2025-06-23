@@ -17294,14 +17294,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_map_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/map.js */ "./src/js/components/map.js");
 /* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
 /* harmony import */ var _components_aos_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/aos.js */ "./src/js/components/aos.js");
-/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/header.js */ "./src/js/components/header.js");
-/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_infra_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/infra.js */ "./src/js/components/infra.js");
-/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
-/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
-/* harmony import */ var _components_about_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/about.js */ "./src/js/components/about.js");
-/* harmony import */ var _components_history_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/history.js */ "./src/js/components/history.js");
-/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
+/* harmony import */ var _components_benefits_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/benefits.js */ "./src/js/components/benefits.js");
+/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/header.js */ "./src/js/components/header.js");
+/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
+/* harmony import */ var _components_infra_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/infra.js */ "./src/js/components/infra.js");
+/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
+/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
+/* harmony import */ var _components_about_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/about.js */ "./src/js/components/about.js");
+/* harmony import */ var _components_history_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/history.js */ "./src/js/components/history.js");
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
 
 
 
@@ -17314,15 +17315,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const rellax = new rellax__WEBPACK_IMPORTED_MODULE_11__(".rellax", {
+
+const rellax = new rellax__WEBPACK_IMPORTED_MODULE_12__(".rellax", {
   center: true
 });
-(0,_components_header_js__WEBPACK_IMPORTED_MODULE_4__.initHeader)();
-(0,_components_slider_js__WEBPACK_IMPORTED_MODULE_5__.initAllSliders)();
-(0,_components_infra_js__WEBPACK_IMPORTED_MODULE_6__.initInfraCards)();
-(0,_components_modal_js__WEBPACK_IMPORTED_MODULE_7__.initModals)();
-(0,_components_about_js__WEBPACK_IMPORTED_MODULE_9__.initClickAbout)();
-(0,_components_history_js__WEBPACK_IMPORTED_MODULE_10__.initHistoryCards)();
+(0,_components_header_js__WEBPACK_IMPORTED_MODULE_5__.initHeader)();
+(0,_components_slider_js__WEBPACK_IMPORTED_MODULE_6__.initAllSliders)();
+(0,_components_infra_js__WEBPACK_IMPORTED_MODULE_7__.initInfraCards)();
+(0,_components_modal_js__WEBPACK_IMPORTED_MODULE_8__.initModals)();
+(0,_components_about_js__WEBPACK_IMPORTED_MODULE_10__.initClickAbout)();
+(0,_components_history_js__WEBPACK_IMPORTED_MODULE_11__.initHistoryCards)();
 
 /***/ }),
 
@@ -17415,6 +17417,34 @@ aos__WEBPACK_IMPORTED_MODULE_0__.init({
   // whether elements should animate out while scrolling past them
   anchorPlacement: "center-bottom" // defines which position of the element regarding to window should trigger the animation
 });
+
+/***/ }),
+
+/***/ "./src/js/components/benefits.js":
+/*!***************************************!*\
+  !*** ./src/js/components/benefits.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const benefits = document.querySelectorAll(".benefit");
+if (benefits.length > 0 && window.innerWidth < 1024) {
+  benefits.forEach(item => {
+    item.addEventListener("click", e => {
+      benefits.forEach(el => el.classList.remove("benefit--active"));
+      item.classList.add("benefit--active");
+    });
+    item.addEventListener("mouseenter", e => {
+      benefits.forEach(el => el.classList.remove("benefit--active"));
+      item.classList.add("benefit--active");
+    });
+    item.addEventListener("mouseleave", e => {
+      benefits.forEach(el => el.classList.remove("benefit--active"));
+      item.classList.add("benefit--active");
+    });
+  });
+}
 
 /***/ }),
 

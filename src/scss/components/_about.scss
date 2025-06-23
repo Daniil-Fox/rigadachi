@@ -70,13 +70,16 @@
       transition: transform 0.3s linear;
     }
 
-    &:hover img,
     &:focus img {
       transform: scale(1.05);
     }
-    &:hover::after,
-    &:focus::after {
-      opacity: 1;
+    @include hover {
+      img {
+        transform: scale(1.05);
+      }
+      &::after {
+        opacity: 1;
+      }
     }
 
     &:focus {

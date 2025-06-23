@@ -61,9 +61,11 @@
   &__desc {
     position: absolute;
     z-index: 5;
-    left: 24px;
-    right: 24px;
-    bottom: 25px;
+    left: 10px;
+    right: 10px;
+    top: 15px;
+    bottom: 15px;
+    overflow-y: auto;
     max-height: 100%;
     opacity: 0;
     transition: opacity 0.3s ease-in;
@@ -105,6 +107,16 @@
       opacity: 1;
     }
   }
+
+  &.benefit--active {
+    .benefit__img::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .benefit__desc {
+      opacity: 1;
+    }
+  }
 }
 
 @media (min-width: 651px) {
@@ -121,6 +133,7 @@
     &__header {
       margin-bottom: 48px;
     }
+
     &__slider {
       padding: 0 var(--container-offset);
     }
@@ -132,6 +145,12 @@
     }
     &__capture {
       font-size: 16px;
+    }
+    &__desc {
+      top: unset;
+      left: 24px;
+      right: 24px;
+      bottom: 25px;
     }
   }
 }
