@@ -131,4 +131,22 @@ export const initAllSliders = () => {
   $(window).on("resize", function () {
     $(".owl-carousel").trigger("refresh.owl.carousel");
   });
+
+  // Открытие owl-carousel на нужном слайде по клику на .history-item
+  $(document).on(
+    "click",
+    ".history-item[data-modal-open='stories']",
+    function () {
+      const index = $(this).closest(".swiper-slide").index();
+      // Открываем модалку (если не открыта)
+      const modal = document.getElementById("stories");
+      if (modal && !modal.classList.contains("modal--open")) {
+        modal.classList.add("modal--open");
+        document.body.style.overflow = "hidden";
+      }
+      // Переключаем owl-carousel на нужный слайд
+      const owl = $("#stories .owl-carousel");
+      owl.trigger("to.owl.carousel", [index, 0, true]);
+    }
+  );
 };
