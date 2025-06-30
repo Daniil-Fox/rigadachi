@@ -830,7 +830,7 @@ a {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 99;
+  z-index: 600;
   width: 100%;
   -webkit-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
