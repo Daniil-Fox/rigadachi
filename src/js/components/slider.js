@@ -119,6 +119,8 @@ export const initAllSliders = () => {
     center: true,
     autoWidth: true,
     nav: false,
+    touchDrag: false,
+    // mouseDrag: false,
   });
 
   $(".stories__btn--prev").click(function () {

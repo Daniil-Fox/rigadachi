@@ -17779,7 +17779,9 @@ const initAllSliders = () => {
     loop: true,
     center: true,
     autoWidth: true,
-    nav: false
+    nav: false,
+    touchDrag: false
+    // mouseDrag: false,
   });
   $(".stories__btn--prev").click(function () {
     owl.trigger("prev.owl.carousel");
