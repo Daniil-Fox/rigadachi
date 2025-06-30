@@ -2169,10 +2169,6 @@ a {
   margin-bottom: 0;
 }
 .realize__container {
-  background-image: url("./../img/realize.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   position: relative;
   padding: 24px 15px;
   margin-left: calc(-1 * var(--container-offset));
@@ -2181,9 +2177,19 @@ a {
 .realize__container::after {
   content: "";
   position: absolute;
+  z-index: 2;
   inset: 0;
   background: #10173c;
   opacity: 0.1;
+}
+.realize__img {
+  position: absolute;
+  inset: 0;
+}
+.realize__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .realize__desc {
   font-weight: 600;
